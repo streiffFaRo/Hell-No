@@ -9,7 +9,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    private static readonly int MovementSpeed = Animator.StringToHash("MovementSpeed");
+    private static readonly int Grounded = Animator.StringToHash("Grounded");
     /////////////////////////////////////////////////////////////////////////////////////////////
 
     #region Inspector
@@ -23,6 +24,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speedChangeRate = 10f;
     [Min(0)]
     [SerializeField] private float rotationSpeed = 10f;
+
+    [Header("Slope Movement")]
+    [Min(0)]
+    [Tooltip("Konzept für das Laufen von Treppen.")]
+    [SerializeField] private float pullDownForce = 5f;
+    [Tooltip("Wie weit runter der Raycast nach der Treppe sucht.")]
+    [SerializeField] private float raycastLength = 0.5f;
+    [Tooltip("Layermask wird genutzt um Kollision mit dem Spieler zu verhindern.")]
+    [SerializeField] private LayerMask raycastMask;
+    
 
     [Header("Camera")]
     [Tooltip("Fokus und Rotationspunkt der Kamera")]
@@ -52,10 +63,14 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Kehrt die Y-Achse für Controller")]
     [SerializeField] private bool invertY = true;
 
+    [Header("Animations")]
+    [SerializeField] private Animator animator;
+    [Min(0)]
+    [SerializeField] private float coyoteTime = 0.2f;
     
     #endregion
-
-
+    
+    
     private CharacterController characterController;
     private GameInput input;
     private InputAction moveAction;
@@ -65,7 +80,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 cameraRotation;
     private Vector3 lastMovement;
     private Quaternion characterTargetRotation = Quaternion.identity;
+    private float airTime;
+    private bool isGrounded;
     
+    
+
     /////////////////////////////////////////////////////////////////////////////////////////////
 
     #region Eventfunctions
@@ -91,6 +110,8 @@ public class PlayerController : MonoBehaviour
 
         Rotate(moveInput);
         Move(moveInput);
+        CheckGround();
+        UpdateAnimator();
     }
 
     private void LateUpdate()
@@ -109,6 +130,7 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+    
     /////////////////////////////////////////////////////////////////////////////////////////////
 
     #region Camera
@@ -215,12 +237,48 @@ public class PlayerController : MonoBehaviour
         
         Vector3 movement = targetDirection * currentspeed;
         characterController.SimpleMove(movement);
+
+        if (Physics.Raycast(transform.position + Vector3.up * 0.01f, Vector3.down, out RaycastHit hit, raycastLength, raycastMask, QueryTriggerInteraction.Ignore))
+        {
+            if (Vector3.ProjectOnPlane(movement, hit.normal).y < 0)
+            {
+                characterController.Move(Vector3.down * (pullDownForce * Time.deltaTime));
+            }
+        }
+        
         lastMovement = movement;
     }
 
     #endregion
 
-    ///////////////////////////////////////////////////////////////////////////////////
+    
 
+    #region Animator&Groundcheck
+
+    private void UpdateAnimator()
+    {
+        Vector3 velocity = lastMovement;
+        velocity.y = 0;
+        float speed = velocity.magnitude;
+        
+        animator.SetFloat(MovementSpeed, speed);
+        animator.SetBool(Grounded, isGrounded);
+    }
+
+    private void CheckGround ()
+    {
+        if (characterController.isGrounded)
+        {
+            airTime = 0;
+        }
+        else
+        {
+            airTime += Time.deltaTime;
+        }
+
+        isGrounded = airTime < coyoteTime;
+    }
+
+    #endregion
 
 }
