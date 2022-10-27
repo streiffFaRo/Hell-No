@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion characterTargetRotation = Quaternion.identity;
     private float airTime;
     private bool isGrounded;
+    private Interactable selectedInteractable;
     
     
 
@@ -91,12 +92,13 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        characterController = GetComponent<CharacterController>();
         input = new GameInput();
         moveAction = input.Player.Move;
         lookAction = input.Player.Look;
-        characterController = GetComponent<CharacterController>();
 
         //TODO Subscribe to input Events
+        input.Player.Interact.performed += Interact;
     }
 
     private void OnEnable()
@@ -127,6 +129,17 @@ public class PlayerController : MonoBehaviour
     private void OnDestroy()
     {
         //TODO unsubscribe from input events
+        input.Player.Interact.performed -= Interact;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        TrySelectInteractable(other);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        TryDeselectInteractable(other);
     }
 
     #endregion
@@ -183,15 +196,13 @@ public class PlayerController : MonoBehaviour
         return lookAction.activeControl.name == "delta";
     }
     
-    #endregion
-    
-    
     private void ReadInput()
     {
         moveInput = moveAction.ReadValue<Vector2>();
         lookInput = lookAction.ReadValue<Vector2>();
     }
-     
+    #endregion
+
     #region Movement
 
     private void Rotate(Vector2 moveInput)
@@ -250,9 +261,7 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
-
     
-
     #region Animator&Groundcheck
 
     private void UpdateAnimator()
@@ -281,4 +290,50 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    #region Interactable
+
+    private void Interact(InputAction.CallbackContext _)
+    {
+        if (selectedInteractable != null)
+        {
+            selectedInteractable.Interact();
+        }
+    }
+    
+    private void TrySelectInteractable(Collider other)
+    {
+        Interactable interactable = other.GetComponent<Interactable>();
+
+        if (interactable == null)
+        {
+            return;
+        }
+
+        if (selectedInteractable != null)
+        {
+            selectedInteractable.Deselect();
+        }
+        
+        selectedInteractable = interactable;
+        selectedInteractable.Selected();
+    }
+
+    private void TryDeselectInteractable(Collider other)
+    {
+        Interactable interactable = other.GetComponent<Interactable>();
+        
+        if (interactable == null)
+        {
+            return;
+        }
+
+        if (interactable == selectedInteractable)
+        {
+            selectedInteractable.Deselect();
+            selectedInteractable = null;
+        }
+    }
+
+    #endregion
+    
 }
