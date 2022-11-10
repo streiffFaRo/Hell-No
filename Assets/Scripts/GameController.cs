@@ -1,6 +1,7 @@
 using System;
 
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GameController : MonoBehaviour
 
         if (dialogueController == null)
         {
-            Debug.LogError("No dialogueController found in scenen", this);
+            Debug.LogError("No dialogueController found in scene", this);
         }
     }
 
@@ -55,10 +56,10 @@ public class GameController : MonoBehaviour
 
     #endregion
 
-    public void StartDialogue(string dialoguePath)
+    public void StartDialogue(string dialoguePath, UnityEvent onEndDialogue)
     {
         EnterDialogMode();
-        dialogueController.StartDialogue(dialoguePath);
+        dialogueController.StartDialogue(dialoguePath, onEndDialogue);
     }
 
     private void EndDialogue()

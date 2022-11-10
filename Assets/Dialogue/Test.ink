@@ -4,7 +4,7 @@ Blah Blah
 ->END
 
 === choices ===
-Two Choices
+NPC: Two Choices
 *[One]
     You Choose 1!
 *[Two]

@@ -1,18 +1,31 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 using Ink;
 using Ink.Runtime;
 
+#if UNITY_EDITOR
+using Ink.UnityIntegration;
+#endif
+
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+
 
 public class DialogueController : MonoBehaviour
 {
+
+    private const string SpeakerSeparator = ":";
+    private const string EscapedColon = "::";
+    private const string EscapedColonPlaceholder = "$";
+    
     public static event Action DialogueOpend;
     public static event Action DialogueClosed;
-    
-    
+
+    public static event Action<string> InkEvent; 
+
     #region Inspector
 
     [Header("Ink")]
@@ -25,14 +38,27 @@ public class DialogueController : MonoBehaviour
 
     #endregion
 
+    private GameState gameState;
+    
     private Story inkStory;
 
-    #region UnityEventFunctions
+    private UnityEvent onEnd;
 
+    #region UnityEventFunctions
+    
     private void Awake()
     {
+        gameState = FindObjectOfType<GameState>();
+        
         inkStory = new Story(inkAsset.text);
         inkStory.onError += OnInkError;
+        inkStory.BindExternalFunction<string>("Unity_Event", Unity_Event);
+        inkStory.BindExternalFunction<string>("Get_State", Get_State);
+        inkStory.BindExternalFunction<string, int>("Add_State", Add_State);
+        
+#if UNITY_EDITOR
+        InkPlayerWindow.Attach(inkStory, InkPlayerWindow.InkPlayerParams.ForAttachedStories);
+#endif
     }
 
     private void OnEnable()
@@ -61,9 +87,10 @@ public class DialogueController : MonoBehaviour
     
     #region Dialogue Lifecycle
 
-    public void StartDialogue(string dialoguePath)
+    public void StartDialogue(string dialoguePath, UnityEvent onEndDialogue)
     {
-        //TODO Open Dialogue UI 
+        onEnd = onEndDialogue;
+        
         OpenDialogue();
         
         inkStory.ChoosePathString(dialoguePath);
@@ -80,8 +107,14 @@ public class DialogueController : MonoBehaviour
     private void CloseDialogue()
     {
         dialogueBox.gameObject.SetActive(false);
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        
         DialogueClosed?.Invoke();
-        //TODO Clean up
+        
+        onEnd.Invoke();
+        onEnd = null;
+
     }
 
     private void ContinueDialogue()
@@ -93,18 +126,20 @@ public class DialogueController : MonoBehaviour
             return;
         }
 
-        DialogueLine line = new DialogueLine();
+        DialogueLine line;
         if (CanContinue())
         {
             string inkLine = inkStory.Continue();
-            if (inkLine == String.Empty)
+            if (string.IsNullOrWhiteSpace(inkLine))
             {
                 ContinueDialogue();
                 return;
             }
-            //TODO Prase text
-
-            line.text = inkLine;
+            line = ParseText(inkLine, inkStory.currentTags);
+        }
+        else
+        {
+            line = new DialogueLine();
         }
         line.choices = inkStory.currentChoices;
 
@@ -130,6 +165,45 @@ public class DialogueController : MonoBehaviour
     #endregion
 
     #region Ink
+
+    private DialogueLine ParseText(string inkLine, List<string> tags)
+    {
+        inkLine = inkLine.Replace(EscapedColon, EscapedColonPlaceholder);
+        
+        DialogueLine Line = new DialogueLine();
+
+        List<string> parts = inkLine.Split(SpeakerSeparator).ToList();
+
+        string speaker = null;
+        string text = string.Empty;
+        
+        switch (parts.Count)
+        {
+            case 1:
+                text = parts[0];
+                break;
+            case 2:
+                speaker = parts[0];
+                text = parts[1];
+                break;
+            default:
+                Debug.LogWarning($"Ink Dialogue Line was slit at more {SpeakerSeparator} than Expected."+
+                               $"Please make sure to use {EscapedColon} for {SpeakerSeparator} inside text.");
+                    goto case 2;
+
+        }
+        DialogueLine line = new DialogueLine();
+
+        Line.speaker = speaker?.Trim();
+        Line.text = text.Replace(EscapedColonPlaceholder, SpeakerSeparator).Trim();
+
+        if (tags.Contains("thought"))
+        {
+            line.text = $"<i>{line.text}</i>";
+        }
+
+        return Line;
+    }
 
     private bool CanContinue()
     {
@@ -165,8 +239,24 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    #endregion
+    private void Unity_Event(string eventName)
+    {
+        InkEvent?.Invoke(eventName);
+    }
+
+    private object Get_State(String id)
+    {
+        State state = gameState.Get(id);
+        return state != null ? state.amount : 0;
+    }
+
+    private void Add_State(string id, int amount)
+    {
+        gameState.Add(id, amount);
+    }
     
+    #endregion
+
 
 }
 
