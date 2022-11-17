@@ -1,4 +1,4 @@
-INCLUDE Utility/Externalfunction.ink
+
 
 
 === duckmen ===
