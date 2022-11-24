@@ -7,7 +7,7 @@
 ->Gruss
 
 =Gruss
-Jaromir: Geeebbbüüürrreeennn!
+Jaromir: Geeebbbüüühhhrrreeennn!
 Locus: Was?
 Jaromir: Müüünnnzzzeeennn!
 *[Ich möchte über die Brücke] ->Brucke
@@ -36,7 +36,7 @@ Jaromir: {&Mooonnneeettteeennn!|Zaaasssttteeerrr!|Kooohhhllleee!|Abbbgggaaabbbee
 =Offen
 ~Add_State("item_scherbe",-1)
 Locus: Hier nimm dein Geld! 
-Jaromir: Geeewwwiiinnn!
+Jaromir: Geeewwwiiinnnnnn!
 ~ Unity_Event("Brugg")
 ->END
 

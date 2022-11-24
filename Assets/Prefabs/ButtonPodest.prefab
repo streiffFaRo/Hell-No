@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 8979889579048702982}
   - component: {fileID: 8757065406084226951}
   - component: {fileID: 1105994212476107817}
-  - component: {fileID: 2109396109966528414}
+  - component: {fileID: 9120711885491309296}
   m_Layer: 0
   m_Name: Knopf
   m_TagString: Untagged
@@ -644,7 +644,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25a9fb42d361f46ad89221f6d301e96e, type: 2}
+  - {fileID: 2100000, guid: becec6d18765e10479f975eb87fe54f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -674,20 +674,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7413872822025002023}
   m_Mesh: {fileID: 0}
---- !u!64 &2109396109966528414
-MeshCollider:
+--- !u!114 &9120711885491309296
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7413872822025002023}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89e7105e3e80514fb25dc6638c7e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yMovement: -0.049
+  pressColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  downDuration: 0.3
+  easeIn: 2
+  durationIn: 0.3
+  easeOut: 24
+  durationOut: 0.5
 --- !u!1001 &7266705470288320055
 PrefabInstance:
   m_ObjectHideFlags: 0

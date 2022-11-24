@@ -29,12 +29,13 @@ Kevin: Der bedauerliche Victus hatte zuletzt diese Aufgabe. Doch hatte er zu die
 Kevin: Wie du dir vorstellen kannst, war der Meister nicht sehr erfreut darüber.
 Kevin: Victus wurde daraufhin versetzt. Er muss sich nun um alle Franzosen der Hölle kümmern.
 Kevin: Trotzdessen wünsche ich dir nur das Beste.
+{WhyTeller: ->Hub}
 {Hub: ->Hub}
 ->Arbeit
 
 =Arbeit
 Locus: An was arbeitest du da?
-Kevin: Ich bin drauf und dran den Dreizack meines Arbeitgebers zu restaurieren, doch stelle ich mit
+Kevin: Ich bin drauf und dran das Zepter meines Arbeitgebers zu restaurieren, doch stelle ich mit
 <> Schrecken fest, dass es mir an Höllenstahl mangelt.
 *[Höllenstahl?]->Stahl
 +[Wie kann ich helfen?]->Helfen
@@ -119,7 +120,7 @@ Kevin: Er hat damit begonnen Abgaben zu verlangen. Ich bringe ihm immer eine Gla
 ~Add_State("item_stahl",-1)
 ~ Unity_Event("Raum1Done")
 Locus: Ja, hier bitte. 
-Kevin: Vorzüglich. Damit sollte ich den Dreizack fertigstellen können. Ich danke dir Locus.
+Kevin: Vorzüglich. Damit sollte ich das Zepter fertigstellen können. Ich danke dir Locus.
 Kevin: Als Belohnung kannst du dir auch etwas wünschen.
 *[Dreizack] ->Dreizack
 *{Fest}[Teller] ->Teller
@@ -147,7 +148,7 @@ Kevin: Oh, dann gebe ich dir die Teller gerne und wünsche dir viel Glück, du w
 ~Add_State("item_teller",1)
 ~Unity_Event("Teller")
 *[Nein, was ist mit ihm?]->Victus
-*[Gehen]Locus: Das ist doch keine grosse Sache, ich krig das schon hin mit der Feier. ->END
+*[Gehen]Locus: Das ist doch keine grosse Sache, ich krieg das schon hin mit der Feier. ->END
 
 
 =Hub
@@ -155,7 +156,7 @@ Kevin: Brauchst du noch etwas?
 * {Jaromir.Gruss}[Brückenwächter] ->Jaromiri
 * {not Fest}{not WhyTeller}[Ich muss ein Fest organisieren]->Fest
 * {not Teller}{Fest}[Ich brauche Teller] ->Teller
-*{not Fest}{not Teller}[Ich brauche Teller] ->WhyTeller
+*{not Fest}{not WhyTeller}[Ich brauche Teller] ->WhyTeller
 +[Gehen] Locus: Nein, alles gut, bis bald. ->END
 
 

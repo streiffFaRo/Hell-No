@@ -156,7 +156,7 @@ public class DialogueBox : MonoBehaviour
         float height = rectTransform.rect.height;
         
         this.DOKill();
-        Sequence sequence = DOTween.Sequence();
+        Sequence sequence = DOTween.Sequence(this);
 
         sequence.Append(DOMove(Vector2.zero).From(new Vector2(0, -height)))
                 .Join(DOFade(1).From(0));
@@ -169,7 +169,7 @@ public class DialogueBox : MonoBehaviour
         float height = rectTransform.rect.height;
         
         this.DOKill();
-        Sequence sequence = DOTween.Sequence();
+        Sequence sequence = DOTween.Sequence(this);
         
         sequence.Append(DOMove(new Vector2(0, -height)).From(Vector2.zero))
                 .Join(DOFade(0).From(1));

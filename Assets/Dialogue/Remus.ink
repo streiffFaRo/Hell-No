@@ -31,6 +31,9 @@ Remus: Sobald du bereit bist und ich den Meister rufen kann, melde dich...
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
+*{Kevin.HelfenA}{not Kevin.Schal}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
+*{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
+*{Kevin.HelfenA}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
 +[Gehen]Locus: Ich mach mich dann mal ans Werk!->END
 
 =Geschirr
@@ -73,7 +76,7 @@ Remus: {&Was kann ich gegen dich tun?|Was denn noch?|Bitte lass mich in Ruhe...|
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
-*{Kevin.HelfenA} [Ich brauche Stahl] ->getStahl
+*{Kevin.HelfenA}{not Kevin.Schal} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} [Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getStahl} [Ich brauche einen Schal] ->getSchal
 +[Gehen]Locus: {Ich mach mich dann mal ans Werk!|Bis dann!}->END
