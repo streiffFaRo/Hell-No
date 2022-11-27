@@ -12,13 +12,7 @@ public class PlayerSounds : MonoBehaviour
 
     [SerializeField] private StudioEventEmitter stepSound;
     [SerializeField] private StudioEventEmitter landSound;
-
-    [SerializeField] private string stepSoundParameterName = "surface";
-
-    [SerializeField] private PhysicMaterial defaultStepSoundPhysicMaterial;
     
-    [Header("Raycast")]
-    [SerializeField] private LayerMask layerMask;
     
     [Header("Unity Events")]
     [SerializeField] private UnityEvent onStep;
@@ -40,12 +34,10 @@ public class PlayerSounds : MonoBehaviour
         {
             case "Step":
                 stepSound.Play();
-                ChangeStepSounds(stepSound);
                 onStep.Invoke();
                 break;
             case "Land":
                 landSound.Play();
-                ChangeStepSounds(landSound);
                 onLand.Invoke();
                 break;
             default:
@@ -55,42 +47,7 @@ public class PlayerSounds : MonoBehaviour
     }
 
     #endregion
+    
 
-    private void ChangeStepSounds(StudioEventEmitter emitter)
-    {
-        if (!Physics.Raycast(transform.position + Vector3.up * 0.01f,
-                             Vector3.down,
-                             out RaycastHit hit,
-                             5f,
-                             layerMask, 
-                             QueryTriggerInteraction.Ignore))
-        {
-            return;
-        }
-
-        PhysicMaterial groundPhysicMaterial = hit.collider.sharedMaterial;
-        int stepSoundParameterValue = GetStepSoundParameterValue(groundPhysicMaterial);
-
-
-        emitter.SetParameter(stepSoundParameterName, stepSoundParameterValue);
-    }
-
-    private int GetStepSoundParameterValue(PhysicMaterial physicMaterial)
-    {
-        if (physicMaterial == null)
-        {
-            physicMaterial = defaultStepSoundPhysicMaterial;
-        }
-
-        switch (physicMaterial.name)
-        {
-            case "Grass":  //Physic Material Name, nicht Parameter Label
-                return 0;  //Paramter Wert in FMOD!!
-            case "Wood":
-                return 1;
-            default:
-                return 0;
-            
-        }
-    }
+    
 }

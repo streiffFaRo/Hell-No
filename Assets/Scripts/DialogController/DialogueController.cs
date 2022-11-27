@@ -4,6 +4,8 @@ using System.Linq;
 
 using DG.Tweening;
 
+using FMODUnity;
+
 using Ink;
 using Ink.Runtime;
 
@@ -23,6 +25,12 @@ public class DialogueController : MonoBehaviour
     private const string EscapedColon = "::";
     private const string EscapedColonPlaceholder = "$";
     
+    [Header("DialogueSounds")]
+    [SerializeField] private StudioEventEmitter jaromir;
+    [SerializeField] private StudioEventEmitter kevin;
+    [SerializeField] private StudioEventEmitter remus;
+
+
     public static event Action DialogueOpend;
     public static event Action DialogueClosed;
 
@@ -179,7 +187,6 @@ public class DialogueController : MonoBehaviour
     {
         inkLine = inkLine.Replace(EscapedColon, EscapedColonPlaceholder);
         
-        DialogueLine Line = new DialogueLine();
 
         List<string> parts = inkLine.Split(SpeakerSeparator).ToList();
 
@@ -203,15 +210,29 @@ public class DialogueController : MonoBehaviour
         }
         DialogueLine line = new DialogueLine();
 
-        Line.speaker = speaker?.Trim();
-        Line.text = text.Replace(EscapedColonPlaceholder, SpeakerSeparator).Trim();
+        line.speaker = speaker?.Trim();
+        line.text = text.Replace(EscapedColonPlaceholder, SpeakerSeparator).Trim();
 
         if (tags.Contains("thought"))
         {
             line.text = $"<i>{line.text}</i>";
+            print("KKK");
         }
 
-        return Line;
+        if (tags.Contains("jaromir"))
+        {
+            jaromir.Play();
+        }
+        if (tags.Contains("remus"))
+        {
+            remus.Play();
+        }
+        if (tags.Contains("kevin"))
+        {
+            kevin.Play();
+        }
+
+        return line;
     }
 
     private bool CanContinue()
@@ -274,6 +295,4 @@ public struct DialogueLine
     public string speaker;
     public string text;
     public List<Choice> choices;
-
-    //TODO AudioClip hinzufügen?
 }

@@ -4,3 +4,6 @@ INCLUDE Kevin.ink
 INCLUDE Jaromir.ink
 INCLUDE Remus.ink
 INCLUDE Scherbe.ink
+INCLUDE Reifen.ink
+INCLUDE Schokolade.ink
+INCLUDE Teller.ink
