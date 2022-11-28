@@ -8,19 +8,22 @@
 
 =Gruss
 Jaromir: Geeebbbüüühhhrrreeennn! #jaromir
-Locus: Was?
+Locus: Was? #locus
 Jaromir: Müüünnnzzzeeennn! #jaromir
 *[Ich möchte über die Brücke] ->Brucke
-*[Gehen] Locus: Sowas muss ich mir nicht antun. ->END
+*[Gehen] Locus: Sowas muss ich mir nicht antun. #locus
+->END
 
 =Brucke
-Locus: Ich möchte über die Brücke. 
+Locus: Ich möchte über die Brücke. #locus
 Jaromir: Geeelllddd! #jaromir
+~ Unity_Event("Q-Jaromir-1")
 *[Du kannst mich mal] ->Agro
-*[Gehen] Locus: Sowas muss ich mir nicht antun. ->END
+*[Gehen] Locus: Sowas muss ich mir nicht antun. #locus
+->END
 
 =Agro
-Locus: Du kannst mich mal!
+Locus: Du kannst mich mal! #locus
 Jaromir: Fiiinnnaaannnzzzeeennn! #jaromir
 ->END
 
@@ -31,23 +34,24 @@ Jaromir: {&Mooonnneeettteeennn!|Zaaasssttteeerrr!|Kooohhhllleee!|Abbbgggaaabbbee
 *{Get_State("item_reifen")} [Reifen geben] ->Betrug1
 *{Get_State("item_schokolade")}[Schokolade geben] ->Betrug2
 *{not Agro} [Du kannst mich mal] ->Agro
-+[Gehen] Locus: Aufwiederstehlen ->END
++[Gehen] Locus: Aufwiederstehlen #locus
+->END
 
 =Betrug1
 ~Add_State("item_reifen",-1)
-Locus: Hier nimm dein Geld! 
+Locus: Hier nimm dein Geld! #locus
 Jaromir: Beeetttrrruuuggg! #jaromir
 ->END
 
 =Betrug2
 ~Add_State("item_schokolade",-1)
-Locus: Hier nimm dein Geld! 
+Locus: Hier nimm dein Geld! #locus
 Jaromir: Beeetttrrruuuggg! #jaromir
 ->END
 
 =Offen
 ~Add_State("item_scherbe",-1)
-Locus: Hier nimm dein Geld! 
+Locus: Hier nimm dein Geld! #locus
 Jaromir: Geeewwwiiinnnnnn! #jaromir
 ~ Unity_Event("Brugg")
 ->END

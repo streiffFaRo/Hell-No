@@ -77,6 +77,49 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3451189020407941946, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451189020407941946, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0270b45d8ed5094d8746cd6efae3527,
+        type: 3}
+    - target: {fileID: 3451189020407941946, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0270b45d8ed5094d8746cd6efae3527,
+        type: 3}
+    - target: {fileID: 3451189020407941946, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0270b45d8ed5094d8746cd6efae3527,
+        type: 3}
+    - target: {fileID: 5780527775652039142, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780527775652039142, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780527775652039142, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780527775652039142, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6186922841138347457, guid: 1a1b67e013a36d74486c8c8071b586ec,
         type: 3}
       propertyPath: m_Pivot.x
@@ -182,5 +225,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7734516997283286436, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734516997283286436, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1fdba5bdcfc6ecb43bf083e54ce569e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a1b67e013a36d74486c8c8071b586ec, type: 3}

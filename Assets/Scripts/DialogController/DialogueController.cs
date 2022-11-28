@@ -29,6 +29,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private StudioEventEmitter jaromir;
     [SerializeField] private StudioEventEmitter kevin;
     [SerializeField] private StudioEventEmitter remus;
+    [SerializeField] private StudioEventEmitter locus;
 
 
     public static event Action DialogueOpend;
@@ -230,6 +231,10 @@ public class DialogueController : MonoBehaviour
         if (tags.Contains("kevin"))
         {
             kevin.Play();
+        }
+        if (tags.Contains("locus"))
+        {
+            locus.Play();
         }
 
         return line;
