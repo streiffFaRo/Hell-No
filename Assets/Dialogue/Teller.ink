@@ -10,5 +10,5 @@ Locus: Ein paar öde Teller... #thought
 ->END
 
 =After
-Locus: Diese Teller könnte ich für das Fest meines Meisters nutzen. #thought
+Locus: Mit Kevins Erlaubnis, könnte ich diese Teller für das Fest meines Meisters nutzen.#thought
 ->END

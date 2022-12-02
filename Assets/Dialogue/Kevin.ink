@@ -10,24 +10,24 @@
 
 
 =Gruss
-Kevin: Sei gegrüsst Locus! Machet es euch gemütlich in meinem bescheidenen Domizil. #kevin
+Kevin: Sei gegrüsst <color=\#66DBFF>Locus</color>! Machet es euch gemütlich in meinem bescheidenen Domizil. #kevin
 Locus: Danke. Ich hoffe ich störe nicht. #locus
 Kevin: Nein, ich wollte sowieso eine kurze Pause einlegen. #kevin
 *{Remus.Start}[Ich muss ein Fest organisieren]->Fest
 *[An was arbeitest du da?] ->Arbeit
 
 =Fest
-Locus: Ich muss ein Fest für den Teufel organisieren. #locus
+Locus: Ich muss ein Fest für den <color=\#66DBFF>Teufel</color> organisieren. #locus
 Kevin: Oh, dann wünsche ich dir viel Glück, du weisst ja was mit dem letzten geschah, der diese Aufgabe hatte... #kevin
 *[Nein, was ist mit ihm?]->Victus
 *{not Arbeit}[An was arbeitest du da?]->Arbeit
 
 =Victus
 Lovus: Nein, was ist mit ihm? #locus
-Kevin: Der bedauerliche Victus hatte zuletzt diese Aufgabe. Doch hatte er zu diesem Fest weder Teller, Getränke,
-<> Ballons und schon gar keinen Kuchen besorgt. #kevin
-Kevin: Wie du dir vorstellen kannst, war der Meister nicht sehr erfreut darüber. #kevin
-Kevin: Victus wurde daraufhin versetzt. Er muss sich nun um alle Franzosen der Hölle kümmern. #kevin
+Kevin: Der bedauerliche <color=\#66DBFF>Victus</color> hatte zuletzt diese Aufgabe. Doch hatte er zu diesem Fest weder <color=\#58FF5E>Teller</color>, <color=\#58FF5E>Getränke</color>,
+<> <color=\#58FF5E>Ballons</color> und schon gar keinen <color=\#58FF5E>Kuchen</color> besorgt. #kevin
+Kevin: Wie du dir vorstellen kannst, war der <color=\#66DBFF>Meister</color> nicht sehr erfreut darüber. #kevin
+Kevin: <color=\#66DBFF>Victus</color> wurde daraufhin versetzt. Er muss sich nun um alle Franzosen der Hölle kümmern. #kevin
 Kevin: Trotzdessen wünsche ich dir nur das Beste. #kevin
 {WhyTeller: ->Hub}
 {Hub: ->Hub}
@@ -35,17 +35,17 @@ Kevin: Trotzdessen wünsche ich dir nur das Beste. #kevin
 
 =Arbeit
 Locus: An was arbeitest du da? #locus
-Kevin: Ich bin drauf und dran das Zepter meines Arbeitgebers zu restaurieren, doch stelle ich mit
-<> Schrecken fest, dass es mir an Höllenstahl mangelt. #kevin
+Kevin: Ich bin drauf und dran das <color=\#58FF5E>Zepter</color> meines Arbeitgebers zu restaurieren, doch stelle ich mit
+<> Schrecken fest, dass es mir an <color=\#58FF5E>Höllenstahl</color> mangelt. #kevin
 *[Höllenstahl?]->Stahl
 +[Wie kann ich helfen?]->Helfen
 *[Was geht mich das an?]->angehen
 +[Gehen] ->Gehen1
 
 =Stahl
-Locus: Was zum Chef ist denn Höllenstahl? #locus
+Locus: Was zum Chef ist denn <color=\#58FF5E>Höllenstahl</color>? #locus
 Kevin: Es schmerzt festzustellen, dass du solch mangelndes Verstädnis über grundlegende Praktiken meiner Arbeit hast. #kevin
-Kevin: Der Höllenstahl ist eines meiner wichtigesten und rarsten Materialien. Nur der Meister höchst selbst kann es fertigen. #kevin
+Kevin: Der <color=\#58FF5E>Höllenstahl</color> ist eines meiner wichtigesten und rarsten Materialien. Nur der <color=\#66DBFF>Meister</color> höchst selbst kann es fertigen. #kevin
 +[Wie kann ich da helfen?] ->Helfen
 +[Gehen]->Gehen1
 
@@ -79,7 +79,7 @@ Kevin: Gute Besserung. #kevin
 =HelfenA
 ich möchte mich nützlich machen. #locus
 Kevin: Nun denn, ich denke ich habe da eine kleine Aufgabe für jemanden deines Kalibers. #kevin
-Kevin: Gehe bitte zu Remus und bitte ihn um einen Nachschub von einem Höllenstahlbarren. #kevin
+Kevin: Gehe bitte zu <color=\#66DBFF>Remus</color> und bitte ihn um einen Nachschub von einem <color=\#58FF5E>Höllenstahlbarren</color>. #kevin
 Locus: Dann mache ich mich mal auf den Weg. #locus
 ~ Unity_Event("Q-Kevin-1")
 ->END
@@ -101,7 +101,7 @@ Kevin: Willkommen zurück. Du kommst mir gerade zur rechten Zeit. Steht dir der 
 
 
 =Stahlda
-Kevin: Freut mich dich wiederzusehen, mein kleiner Assistent. Hast du den Stahl um den ich dich gebeten habe? #kevin
+Kevin: Freut mich dich wiederzusehen, mein kleiner Assistent. Hast du den <color=\#58FF5E>Stahl</color> um den ich dich gebeten habe? #kevin
 +[Noch nicht] Locus: Noch nicht, ich werde mich schon bald darum kümmern. #locus
 ->END
 * {Get_State("item_stahl")}[Stahlbarren geben]->Loot
@@ -109,15 +109,15 @@ Kevin: Freut mich dich wiederzusehen, mein kleiner Assistent. Hast du den Stahl 
 
 =Schal
 Locus: Aber sicher doch, hier bitte. #locus
-Kevin: Ja aber was ist das denn?! Ich brauche Stahl und keinen Schal! Was hast du dir dabei gedacht? #kevin
-Kevin: Geh zurück zu Remus und besorge mir meinen Höllenstahlbarren! #kevin
+Kevin: Ja aber was ist das denn?! Ich brauche <color=\#58FF5E>Stahl</color> und keinen <color=\#58FF5E>Schal</color>! Was hast du dir dabei gedacht? #kevin
+Kevin: Geh zurück zu <color=\#66DBFF>Remus</color> und besorge mir meinen <color=\#58FF5E>Höllenstahlbarren</color>! #kevin
 ~ Unity_Event("Q-Kevin-5")
 ->END
 
 
 =Jaromiri
-Locus: Was ist mit Jaromir? Warum lässt er mich nicht über die Brücke? #locus
-Kevin: Er hat damit begonnen Abgaben zu verlangen. Da er nicht sehr gut sehen kann, bringe ich ihm immer etwas glänzendes als "Tribut". #kevin
+Locus: Was ist mit <color=\#66DBFF>Jaromir</color>? Warum lässt er mich nicht über die Brücke? #locus
+Kevin: Er hat damit begonnen Abgaben zu verlangen. Da er nicht sehr gut sehen kann, bringe ich ihm immer etwas glänzendes als "<color=\#58FF5E>Tribut</color>". #kevin
 ~ Unity_Event("Q-Jaromir-2")
 ->Hub
 
@@ -125,31 +125,31 @@ Kevin: Er hat damit begonnen Abgaben zu verlangen. Da er nicht sehr gut sehen ka
 ~Add_State("item_stahl",-1)
 ~ Unity_Event("Q-Kevin-3")
 Locus: Ja, hier bitte. #locus
-Kevin: Vorzüglich. Damit sollte ich das Zepter fertigstellen können. Ich danke dir Locus. #kevin
-Kevin: Als Belohnung kannst du dir auch etwas wünschen. #kevin
+Kevin: Vorzüglich. Damit sollte ich das <color=\#58FF5E>Zepter</color> fertigstellen können. Ich danke dir <color=\#66DBFF>Locus</color>. #kevin
+Kevin: Als <color=\#58FF5E>Belohnung</color> kannst du dir auch etwas wünschen. #kevin
 *[Zepter] ->Dreizack
 *{Fest}[Teller] ->Teller
 *{not Fest}[Teller] ->WhyTeller
 *[Nichts] Locus: Ich bin wunschlos glücklich. Ich brauche nichts.: ->Hub
 
 =Dreizack
-Locus: Ich möchste gerne das Zepter. #locus
+Locus: Ich möchste gerne das <color=\#58FF5E>Zepter</color>. #locus
 Kevin: Bist du denn von Sinnen? Den kann ich dir keinesfalls überlassen! Such dir etwas anderes aus. #kevin
 *[Teller]  ->Teller
 *[Nichts] Locus: Ich bin wunschlos glücklich. Ich brauche nichts.: ->Hub
 
 =Teller
-Locus: Ich würde gerne deine Teller für das Fest nutzen. #locus
-Kevin: Gewiss doch, eine sehr weise Entscheidung. Ich hoffe es gelingt dir den Meister zufrieden zu stellen. #kevin
+Locus: Ich würde gerne deine <color=\#58FF5E>Teller</color> für das Fest nutzen. #locus
+Kevin: Gewiss doch, eine sehr weise Entscheidung. Ich hoffe es gelingt dir den <color=\#66DBFF>Meister</color> zufrieden zu stellen. #kevin
 ~Add_State("item_teller",1)
 ~Unity_Event("Teller")
 ->Hub
 
 =WhyTeller
-Locus: Ich würde gerne deine Teller für ein Fest nutzen. #locus
+Locus: Ich würde gerne deine <color=\#58FF5E>Teller</color> für ein Fest nutzen. #locus
 Kevin: Ein Fest? Was gibt es denn schönes zu feiern? #kevin
-Locus: Den Geburtstag unseres Meisters. Er hat micn angeblich persönlich für diese Aufgabe auserwählt. #locus
-Kevin: Oh, dann gebe ich dir die Teller gerne und wünsche dir viel Glück, du weisst ja was mit dem letzten geschah, der diese Aufgabe hatte... #kevin
+Locus: Den Geburtstag unseres <color=\#66DBFF>Meisters</color>. Er hat mich angeblich persönlich für diese Aufgabe auserwählt. #locus
+Kevin: Oh, dann gebe ich dir die <color=\#58FF5E>Teller</color> gerne und wünsche dir viel Glück, du weisst ja was mit dem letzten geschah, der diese Aufgabe hatte... #kevin
 ~Add_State("item_teller",1)
 ~Unity_Event("Teller")
 *[Nein, was ist mit ihm?]->Victus

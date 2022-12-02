@@ -9,9 +9,16 @@ public class GameState : MonoBehaviour
 
     #region Inspector
 
+    
     [SerializeField] private List<State> states;
     
     #endregion
+
+    public int skulltotal;
+    public void Count()
+    {
+        skulltotal = skulltotal+ 1;
+    }
 
     public State Get(string id)
     {

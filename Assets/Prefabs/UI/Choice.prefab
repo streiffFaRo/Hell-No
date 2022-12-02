@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 2558202603891239392, guid: 1a1b67e013a36d74486c8c8071b586ec,
         type: 3}
       propertyPath: EventReference.Path
-      value: event:/Clicksound
+      value: event:/UI/Clicksound
       objectReference: {fileID: 0}
     - target: {fileID: 2558202603891239392, guid: 1a1b67e013a36d74486c8c8071b586ec,
         type: 3}

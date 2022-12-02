@@ -217,7 +217,6 @@ public class DialogueController : MonoBehaviour
         if (tags.Contains("thought"))
         {
             line.text = $"<i>{line.text}</i>";
-            print("KKK");
         }
 
         if (tags.Contains("jaromir"))
