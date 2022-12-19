@@ -27,8 +27,8 @@ Remus: Nein... Denkst du etwa ich bin mit meiner Aufgabe zufrieden? Tag für Tag
 Locus: Also was genau möchte er für sein Fest? #locus
 Remus: Abgesehen vom <color=\#58FF5E>Geschirr</color>, den <color=\#58FF5E>Getränken</color> und einem <color=\#58FF5E>Kuchen</color> möchte der <color=\#66DBFF>Meister</color> nur ein paar <color=\#58FF5E>Ballons</color> zu seinem Fest... #remus
 Remus: Alles was du gesammelt hast kannst du auf diesem <color=\#58FF5E>Tisch</color> lagern. Ich habe dir bereits einige <color=\#58FF5E>Kerzen</color> hinterlegt. #remus
-Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen kann, melde dich... #remus
 ~ Unity_Event("Q-Remus-1")
+Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen kann, melde dich... #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +[Getränke?] ->Getranke

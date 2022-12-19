@@ -117,8 +117,8 @@ Kevin: Geh zurück zu <color=\#66DBFF>Remus</color> und besorge mir meinen <colo
 
 =Jaromiri
 Locus: Was ist mit <color=\#66DBFF>Jaromir</color>? Warum lässt er mich nicht über die Brücke? #locus
-Kevin: Er hat damit begonnen Abgaben zu verlangen. Da er nicht sehr gut sehen kann, bringe ich ihm immer etwas glänzendes als "<color=\#58FF5E>Tribut</color>". #kevin
 ~ Unity_Event("Q-Jaromir-2")
+Kevin: Er hat damit begonnen Abgaben zu verlangen. Da er nicht sehr gut sehen kann, bringe ich ihm immer etwas glänzendes als "<color=\#58FF5E>Tribut</color>". #kevin
 ->Hub
 
 =Loot
@@ -141,8 +141,6 @@ Kevin: Bist du denn von Sinnen? Den kann ich dir keinesfalls überlassen! Such d
 =Teller
 Locus: Ich würde gerne deine <color=\#58FF5E>Teller</color> für das Fest nutzen. #locus
 Kevin: Gewiss doch, eine sehr weise Entscheidung. Ich hoffe es gelingt dir den <color=\#66DBFF>Meister</color> zufrieden zu stellen. #kevin
-~Add_State("item_teller",1)
-~Unity_Event("Teller")
 ->Hub
 
 =WhyTeller
@@ -150,8 +148,6 @@ Locus: Ich würde gerne deine <color=\#58FF5E>Teller</color> für ein Fest nutze
 Kevin: Ein Fest? Was gibt es denn schönes zu feiern? #kevin
 Locus: Den Geburtstag unseres <color=\#66DBFF>Meisters</color>. Er hat mich angeblich persönlich für diese Aufgabe auserwählt. #locus
 Kevin: Oh, dann gebe ich dir die <color=\#58FF5E>Teller</color> gerne und wünsche dir viel Glück, du weisst ja was mit dem letzten geschah, der diese Aufgabe hatte... #kevin
-~Add_State("item_teller",1)
-~Unity_Event("Teller")
 *[Nein, was ist mit ihm?]->Victus
 *[Gehen]Locus: Das ist doch keine grosse Sache, ich krieg das schon hin mit der Feier. #locus
 ->END

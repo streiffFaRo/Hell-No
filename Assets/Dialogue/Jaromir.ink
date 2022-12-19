@@ -1,9 +1,6 @@
-
-
 ===Jaromir===
 
 =Start
-~ Unity_Event("Brugg")
 {Gruss: -> Hub}
 ->Gruss
 
@@ -42,12 +39,14 @@ Jaromir: {&Mooonnneeettteeennn!|Zaaasssttteeerrr!|Kooohhhllleee!|Abbbgggaaabbbee
 ~Add_State("item_reifen",-1)
 Locus: Hier nimm dein Geld! #locus
 Jaromir: Beeetttrrruuuggg! #jaromir
+~ Unity_Event("Minus")
 ->END
 
 =Betrug2
 ~Add_State("item_schokolade",-1)
 Locus: Hier nimm dein Geld! #locus
 Jaromir: Beeetttrrruuuggg! #jaromir
+~ Unity_Event("Minus")
 ->END
 
 =Offen

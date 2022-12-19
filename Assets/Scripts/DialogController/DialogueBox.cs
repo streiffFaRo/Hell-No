@@ -127,10 +127,35 @@ public class DialogueBox : MonoBehaviour
             buttonText.SetText(choice.text);
             button.name = choice.text;
 
+
             choiceButtons.Add(button);
         }
 
+        if (choiceButtons.Count > 1)
+        {
+            for (int i = 1; i < choiceButtons.Count-1; i++)
+            {
+                SetNavigation(choiceButtons,i,i-1,i+1);
+            }
+        
+            SetNavigation(choiceButtons, 0, choiceButtons.Count-1, 1);
+            SetNavigation(choiceButtons, choiceButtons.Count-1, choiceButtons.Count-2, 0);
+        }
+
         return choiceButtons;
+    }
+
+    private void SetNavigation(List<Button> list, int index, int up, int down)
+    {
+        Button button = list[index];
+
+        Navigation navigation = button.navigation;
+            
+        navigation.mode = Navigation.Mode.Explicit;
+        navigation.selectOnUp = list[up];
+        navigation.selectOnDown = list[down];
+            
+        button.navigation = navigation;
     }
 
     private void ShowContinueButton(bool show)

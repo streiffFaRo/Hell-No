@@ -26,6 +26,7 @@ Locus: Nein, ich bin keine mobile Müllhalde. #thought
 
 =Nehmen
 ~Add_State("item_scherbe",1)
+~ Unity_Event("TakeS")
 Locus: Dann wollen wir mal unsere "Brückenmaut" bezahlen gehen. #thought
 ->END
 

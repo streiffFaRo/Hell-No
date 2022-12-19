@@ -1,7 +1,9 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 
+using DG.Tweening;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,6 +17,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] private UnityEvent onSelected;
     
     [SerializeField] private UnityEvent onDeselected;
+    
 
     #endregion
 
@@ -41,19 +44,16 @@ public class Interactable : MonoBehaviour
             interaction.Execute();
         }
         
-        Debug.Log("Interact");
         onInteracted.Invoke();
     }
 
     public void Selected()
     {
-        Debug.Log("Select");
         onSelected.Invoke();
     }
 
     public void Deselect()
     {
-        Debug.Log("Deselect");
         onDeselected.Invoke();
     }
 

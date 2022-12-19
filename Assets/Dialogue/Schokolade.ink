@@ -26,6 +26,7 @@ Locus: Nein, ich habe keinen Hunger. #thought
 
 =Nehmen
 ~Add_State("item_schokolade",1)
+~ Unity_Event("TakeSch")
 Locus: Dann wollen wir mal unsere "Brückenmaut" bezahlen gehen. #thought
 ->END
 

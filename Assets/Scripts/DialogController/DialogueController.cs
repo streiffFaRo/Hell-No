@@ -64,7 +64,7 @@ public class DialogueController : MonoBehaviour
         inkStory = new Story(inkAsset.text);
         inkStory.onError += OnInkError;
         inkStory.BindExternalFunction<string>("Unity_Event", Unity_Event);
-        inkStory.BindExternalFunction<string>("Get_State", Get_State);
+        inkStory.BindExternalFunction<string>("Get_State", Get_State, true);
         inkStory.BindExternalFunction<string, int>("Add_State", Add_State);
         
 #if UNITY_EDITOR

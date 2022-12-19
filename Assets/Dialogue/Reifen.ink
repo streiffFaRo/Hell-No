@@ -27,6 +27,7 @@ Locus: Nein, ich habe schon lange kein Auto mehr. #thought
 
 =Nehmen
 ~Add_State("item_reifen",1)
+~ Unity_Event("TakeR")
 Locus: Dann wollen wir mal unsere "Brückenmaut" bezahlen gehen. #thought
 ->END
 
