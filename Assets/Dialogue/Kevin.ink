@@ -159,7 +159,15 @@ Kevin: Brauchst du noch etwas? #kevin
 * {not Fest}{not WhyTeller}[Ich muss ein Fest organisieren]->Fest
 * {not Teller}{Fest}[Ich brauche Teller] ->Teller
 *{not Fest}{not WhyTeller}[Ich brauche Teller] ->WhyTeller
+*{Get_State("item_sage" < 1)}{Rasmus.Help}{Rasmus.5B}{Rasmus.Zahlen32}[Säge] ->Erlaubnis
 +[Gehen] Locus: Nein, alles gut, bis bald. #locus
+->END
+
+=Erlaubnis
+Locus: Ich bin hier um <color=\#66DBFF>Rasmus</color> <color=\#58FF5E>Säge</color> zu holen. Er meinte, dass er sie für die kommende <color=\#58FF5E>Tränenernte</color> benötigt. #locus
+Kevin: Ja bitte, nimm sie ruhig mit. Ich konnte mein Vorhaben noch nicht beenden aber das werde ich selbst noch mit <color=\#66DBFF>Rasmus</color> abklären. Die <color=\#58FF5E>Säge</color> liegt auf dem <color=\#58FF5E>Sarg</color>. #kevin
+Locus: Auf bald dann! #locus
+Kevin: Man sieht sich! #kevin
 ->END
 
 

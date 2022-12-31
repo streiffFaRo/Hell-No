@@ -36,7 +36,8 @@ Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen k
 +[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
 +[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
 
@@ -51,9 +52,11 @@ Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen k
 +[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
 +[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
+
 
 =Geschirr
 Locus: Woher soll ich das <color=\#58FF5E>Geschirr</color> nehmen? #locus
@@ -63,11 +66,13 @@ Remus: Soweit ich weiss sollte <color=\#66DBFF>Kevin</color> in seiner <color=\#
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
-*{Kevin.HelfenA}{not getStahl}{not getSchal}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
-*{Kevin.Schal}{not Kevin.Loot} [Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl} [Ich brauche einen Schal] ->getSchal
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
+*{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
 +[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
+
 
 =Getranke
 Locus: Wie komme ich zu <color=\#58FF5E>Getränken</color>? Und was möchte der <color=\#66DBFF>Chef</color> denn überhaupt trinken? #locus
@@ -77,9 +82,10 @@ Remus: Woher soll ich das wissen? Sehe ich aus wie sein Mundschenk? Ich denke so
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
-*{Kevin.HelfenA}{not getStahl}{not getSchal}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
-*{Kevin.Schal}{not Kevin.Loot} [Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl} [Ich brauche einen Schal] ->getSchal
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
+*{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
 +[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
 
@@ -91,11 +97,13 @@ Remus: Jetzt wirds lächerlich. #remus
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
-*{Kevin.HelfenA}{not getStahl}{not getSchal}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
-*{Kevin.Schal}{not Kevin.Loot} [Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl} [Ich brauche einen Schal] ->getSchal
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
+*{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
 +[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
+
 
 =Ballons
 Locus: Wo würdest du nach <color=\#58FF5E>Ballons</color> suchen? #locus
@@ -105,9 +113,10 @@ Remus: <color=\#66DBFF>Seth</color>, der Schädel benutzt einige um auf Augenhö
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
-*{Kevin.HelfenA}{not getStahl}{not getSchal}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
-*{Kevin.Schal}{not Kevin.Loot} [Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl} [Ich brauche einen Schal] ->getSchal
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
+*{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
 +[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
 
@@ -119,11 +128,13 @@ Remus: {&Was kann ich gegen dich tun?|Was denn noch?|Bitte lass mich in Ruhe...|
 +[Getränke?] ->Getranke
 +[Kuchen?] ->Kuchen
 +[Ballons?] ->Ballons
-*{Kevin.HelfenA}{not getStahl}{not getSchal}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
-*{Kevin.Schal}{not Kevin.Loot} [Ich brauche Stahl] ->dochStahl
-*{Kevin.HelfenA}{not getStahl} [Ich brauche einen Schal] ->getSchal
-+[Gehen]Locus: {Ich mach mich dann mal ans Werk!|Bis dann!} #locus
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
+*{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
+*{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
+*{Rasmus.Instrumente}{not Alarm}[Rasmus Lizenz]->Alarm
++[Gehen]Locus: Ich mach mich dann mal ans Werk! #locus
 ->END
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -155,6 +166,10 @@ Remus: Ich denke, dass dein Gehör sein könnte. Aber nun ergibt das auch einen 
 ~ Unity_Event("Q-Kevin-2")
 -> END
 
+=Alarm
+Locus: Ich habe gesehen, dass Rasmus eine ausgelaufnene Lizenz für seine Streckbank hat. Vielleicht solltest du ihn darauf ansprechen. #locus
+Remus: Was?! Er hat sie immer noch nicht erneuert?! Ich habe ihn bereits zwei Mal darauf angesprochen! Das wird Folgen nach sich ziehen. Ich danke dir für deine Meldung. #remus
+->END
 
 
 

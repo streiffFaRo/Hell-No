@@ -30,6 +30,11 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private StudioEventEmitter kevin;
     [SerializeField] private StudioEventEmitter remus;
     [SerializeField] private StudioEventEmitter locus;
+    [SerializeField] private StudioEventEmitter seth;
+    [SerializeField] private StudioEventEmitter skelett;
+    [SerializeField] private StudioEventEmitter magister;
+    [SerializeField] private StudioEventEmitter rasmus;
+    [SerializeField] private StudioEventEmitter rasmusW;
 
 
     public static event Action DialogueOpend;
@@ -139,7 +144,6 @@ public class DialogueController : MonoBehaviour
     {
         if (IsAtEnd())
         {
-            //TODO Class Dialogue UI
             CloseDialogue();
             return;
         }
@@ -234,6 +238,26 @@ public class DialogueController : MonoBehaviour
         if (tags.Contains("locus"))
         {
             locus.Play();
+        }
+        if (tags.Contains("Seth"))
+        {
+            seth.Play();
+        }
+        if (tags.Contains("Magister"))
+        {
+            magister.Play();
+        }
+        if (tags.Contains("Rasmus"))
+        {
+            rasmus.Play();
+        }
+        if (tags.Contains("Skelett"))
+        {
+            skelett.Play();
+        }
+        if (tags.Contains("RasmusW"))
+        {
+            rasmusW.Play();
         }
 
         return line;

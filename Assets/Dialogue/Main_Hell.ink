@@ -10,3 +10,5 @@ INCLUDE Teller.ink
 INCLUDE Seth.ink
 INCLUDE Rasmus.ink
 INCLUDE Magister.ink
+INCLUDE Tisch.ink
+INCLUDE Saege.ink
