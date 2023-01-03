@@ -12,3 +12,4 @@ INCLUDE Rasmus.ink
 INCLUDE Magister.ink
 INCLUDE Tisch.ink
 INCLUDE Saege.ink
+INCLUDE Skelett.ink

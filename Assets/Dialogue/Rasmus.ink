@@ -5,6 +5,7 @@
 {Instrumente: ->PostAnzeige}
 {Zahlen5: ->PostBett}
 {5B: ->Sage}
+{Help: ->Sage}
 {Zahlen32: ->Sage}
 {Gruss: ->Back}
 ->Gruss
@@ -30,6 +31,7 @@ Rasmus: Rede dir das nur weiter ein. Ich bin überzeugt, dass ich ohne dich weit
 *[Tränen für Fest?] ->Feste
 +[Gehen] Locus: Na dann, ernte mal schön weiter so allein! #locus
 ->END
+
 =Back
 Rasmus: Was willst du <color=\#66DBFF>Locus</color>? #Rasmus
 *[Tränen für Fest?] ->Feste
@@ -129,7 +131,7 @@ Rasmus: Nein, ich denke nicht, dass das zu mir passt oder funktioniert. Ich möc
 =Zahlen32
 Locus: Als neues Instrument für die <color=\#58FF5E>Tränenernte</color> um nächsten Monat deine Erträge zu steigern. #locus
 Rasmus: Hmmm... Ja das könnte funktionieren. Ich nehme den Schal, aber das reicht mir noch nicht. Ich weiss auch schon was. #Rasmus
-Rasmus: Um mein Satz an <color=\#58FF5E>Ernteinstrumenten</color> nochmals zu erweitern, gehe zu <color=\#66DBFF>Kevin</color> und hol mir meine <color=\#58FF5E>Säge</color> zurück.
+Rasmus: Um mein Satz an <color=\#58FF5E>Ernteinstrumenten</color> nochmals zu erweitern, gehe zu <color=\#66DBFF>Kevin</color> und hol mir meine <color=\#58FF5E>Säge</color> zurück. #Rasmus
 ~ Unity_Event("Q-RasmusB-2")
 ~Add_State("item_schal",-1)
 Locus: Bekomme ich dafür auch beide <color=\#58FF5E>Flaschen</color>? #locus
@@ -148,18 +150,18 @@ Rasmus: Damit kriegst du mich nicht. Hast du sonst noch etwas anzubieten? #Rasmu
 
 
 =Zahlen5
-Locus: Es schmerzt mich das anzubieten, aber ich sehe du hast ausser deiner Streckbank keine Schlafmöglichkeit. ich könnte dir im Tausch mein <color=\#58FF5E>Bett</color> anbieten. #Locus
+Locus: Es schmerzt mich das anzubieten, aber ich sehe du hast ausser deiner Streckbank keine Schlafmöglichkeit. ich könnte dir im Tausch mein <color=\#58FF5E>Bett</color> anbieten. #locus
 Rasmus: Ein <color=\#58FF5E>Bett</color>? Das wäre wirklich eine schöne Ergänzung für mein Abteil. Sowas in der Art hat mir auch schon mein Innenarchitekt geraten. #Rasmus
 Rasmus: Also gut, ich tasuche dein <color=\#58FF5E>Bett</color> gegen eine <color=\#58FF5E>Flasche</color>. Ich werde es sogleich holen lassen.#Rasmus
-~ Unity_Event("Q-RasmusC-4")
 ~Add_State("item_flasche",1)
 Locus: Danke.. denke ich.. #locus
+~ Unity_Event("Q-RasmusC-4")
 ->END
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 =Help
 Locus: Kann ich dir vielleicht bei der <color=\#58FF5E>Tränenernte</color> helfen? #locus
-Rasmus: Nein bitte nur das nicht! ... Ich habe aber eine andere Idee wie du dir die <color=\#58FF5E>Flasche</color> verdienen kannst. Ich habe vor kurzem <color=\#66DBFF>Kevin</color> meine <color=\#58FF5E>Säge</color> geliehen weil er sich ein Bett machen wollte oder sowas.
+Rasmus: Nein bitte nur das nicht! ... Ich habe aber eine andere Idee wie du dir die <color=\#58FF5E>Flasche</color> verdienen kannst. Ich habe vor kurzem <color=\#66DBFF>Kevin</color> meine <color=\#58FF5E>Säge</color> geliehen weil er sich ein Bett machen wollte oder sowas. #Rasmus
 Rasmus: Hol mir die <color=\#58FF5E>Säge</color> zurück und versprich mir, dass du mich nie wieder belästigst. Dann überlasse ich dir eine Flasche. #Rasmus
 Locus: Ich verspreche es. #locus
 ~ Unity_Event("Q-Rasmus-2")
@@ -191,15 +193,15 @@ Rasmus: Ich denke nicht, dass dir das etwas bringen wird. #Rasmus
 Locus: Ich habe gesehen, dass die <color=\#58FF5E>Lizenz deiner Streckbank</color> ausgelaufgen ist. Ich werde das <color=\#66DBFF>Remus</color> melden müssen. #locus
 Rasmus: Was? Ich.. also..  Das wollte ich gerade heute austauschen. #Rasmus
 Locus: Erzähl das dem Richter! #locus
-Rasmus: Nagut. Ich überlasse dir eine <color=\#58FF5E>Flasche</color> aber sag bloss nichts weiter!
-~ Unity_Event("Q-RasmusD-4")
+Rasmus: Nagut. Ich überlasse dir eine <color=\#58FF5E>Flasche</color> aber sag bloss nichts weiter! #Rasmus
 ~Add_State("item_flasche",1)
 Locus: Na geht doch. Keine Sorge die Sache ist schon vergessen. #locus
+~ Unity_Event("Q-RasmusD-4")
 ->END
 
 =Sage
 Rasmus: Hast du die <color=\#58FF5E>Säge</color> schon? #Rasmus
-* {Get_State("item_sage")}[Säge geben]->Sage2
+* {Saege.GetSaege}[Säge geben]->Sage2
 +[Noch nicht] Locus: Noch nicht, ich werde mich schon bald darum kümmern. #locus
 ->END
 
@@ -207,9 +209,9 @@ Rasmus: Hast du die <color=\#58FF5E>Säge</color> schon? #Rasmus
 =Sage2
 Locus: Hier hast du deine <color=\#58FF5E>Säge</color>. Bekomme ich nun meine <color=\#58FF5E>Flasche</color>? #locus
 Rasmus: Hier hast du die <color=\#58FF5E>Flasche</color>, du Flasche! #Rasmus
-~ Unity_Event("Q-Rasmus-4")
 ~Add_State("item_flasche",1)
 Locus: Es war auch mir eine Freude mit dir Geschäfte zu machen. #locus
+~ Unity_Event("Q-Rasmus-4")
 ->END
 
 =PostSage
@@ -224,6 +226,8 @@ Rasmus: {Danke nochmals für das Bett. Ich hoffe du bereust das nicht. Falls du 
 =PostAnzeige
 Rasmus: {Diese Erpressung war wiklich kein sehr ehrenvoller Zug von dir.|Stör mich nun nicht wieter!} #Rasmus
 ->END
+
+
 
 
 

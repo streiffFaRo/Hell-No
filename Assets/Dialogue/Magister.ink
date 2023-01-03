@@ -203,7 +203,7 @@ Magister: .
 Magister: ..
 Magister: ...
 {Get_State("frage_richtig") > 4: ->ErgebnisGut}
-{Get_State("frage_falsch") > 4: ->ErgebnisGut}
+{Get_State("frage_falsch") > 4: ->ErgebnisSchlecht}
 ->ErgebnisNormal
 
 =F5R
@@ -213,7 +213,7 @@ Magister: .
 Magister: ..
 Magister: ...
 {Get_State("frage_richtig") > 4: ->ErgebnisGut}
-{Get_State("frage_falsch") > 4: ->ErgebnisGut}
+{Get_State("frage_falsch") > 4: ->ErgebnisSchlecht}
 ->ErgebnisNormal
 
 =ErgebnisGut
@@ -232,10 +232,12 @@ Locus: Habe ich jetzt etwas gewonnen? #locus
 Magister: Ja, wie abgesprochen werde ich dir etwas für deinen <color=\#58FF5E>Auftrag</color> backen. #Magister
 Magister: Ich werde noch einige andere deiner <color=\#58FF5E>Spezies</color> befragen müssen um meine Studie zu beenden und ein klares Ergebis zu sehen. #Magister
 Magister: Ich kümmere mich dann mal um den <color=\#58FF5E>Kuchen</color>. Bitte gedulde dich einen Moment. #Magister
-~ Unity_Event("Q-Magister-2")
-Magister: Ich kümmere mich dann mal um den <color=\#58FF5E>Kuchen</color>. Bitte gedulde dich einen Moment.
+~ Unity_Event("Q-Magister-Fade")
+Magister: .
+Magister: ..
+Magister: ...
 Magister: Bitte sehr, frisch aus dem Ofen. Ich hoffe er ist ganz nach den höllischen Wünschen unseres <color=\#66DBFF>Meister</color>! #Magister
-~ Unity_Event("Q-Magister-3")
+~ Unity_Event("Q-Magister-2")
 ~Add_State("item_kuchen",1)
 ->END
 

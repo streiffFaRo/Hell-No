@@ -20,13 +20,25 @@ Seth: Besonders stolz bin ich auf meine <color=\#66DBFF>Charlocke</color>. Sie h
 Seth: Ich hoffe wenn ihr Schädel voll ausgewachsen ist, wird sie eines Tages meinen Laden übernehmen können. Das wäre mein Hirneswunsch. #Seth
 Seth: Wo wir gerade davon sprechen. Es wäre mir eine grosse Freude wenn du bei Gelegenheit meine ganze <color=\#58FF5E>Familie einsammeln</color> könntest und sie her bringst. #Seth
 Locus: Sagtest du "einsammeln"? #locus
+~ Unity_Event("Q-Skull-1")
 Seth: Ganz recht. Du läuft einfach über sie drüber und dann sollten sie sich in deinem Sack wiederfinden. #Seth
 Locus: Meinem Sack? #locus
 Seth: Ach du weisst was ich meine! #Seth
-~ Unity_Event("Q-Skull-1")
 *[Kaufen?]->Kaufen
 +[Ballons] ->Ballons
 
+=Fam2
+Locus: Du hast doch einmal eine <color=\#66DBFF>achtköpfige Familie</color> erwähnt oder? #locus
+Seth: Ganz recht. Ich und meine Frau <color=\#66DBFF>Clara Kopf</color> haben 7 wunderbare Kinder. #Seth
+Seth: Besonders stolz bin ich auf meine <color=\#66DBFF>Charlocke</color>. Sie hat seit kurzen die Fühung eines <color=\#58FF5E>Limonadenstandes</color> übernommen. #Seth
+Seth: Ich hoffe wenn ihr Schädel voll ausgewachsen ist, wird sie eines Tages meinen Laden übernehmen können. Das wäre mein Hirneswunsch. #Seth
+Seth: Wo wir gerade davon sprechen. Es wäre mir eine grosse Freude wenn du bei Gelegenheit meine ganze <color=\#58FF5E>Familie einsammeln</color> könntest und sie her bringst. #Seth
+Locus: Sagtest du "einsammeln"? #locus
+~ Unity_Event("Q-Skull-1")
+Seth: Ganz recht. Du läuft einfach über sie drüber und dann sollten sie sich in deinem Sack wiederfinden. #Seth
+Locus: Meinem Sack? #locus
+Seth: Ach du weisst was ich meine! #Seth
+->Hub
 
 =Kaufen
 Locus: Wollen denn alle hier nur mein Geld? #locus
@@ -50,11 +62,11 @@ Seth: Ich erinnere mich noch sehr gut an meine Lebzeiten, in denen ich riechen k
 =Weiter
 Seth: {&Wie kann ich weiterhelfen?|Was willst du noch wissen?|Wie kann ich weiter dienlich sein?|Noch was?|Weitere Fragen?|Kann ich sonst noch etwas für dich tun?}
 *[Parfums?]->Parfum
-*[Bodylotions?]->Bodylotion
+*{not korper}[Bodylotions?]->Bodylotion
 *[Bücher?]->Buch
 *[Glaskugeln?]->Glaskugeln
-+{not Skelett}[Ballons] ->Ballons
-+{Skelett}[Gehen] Locus: Ich mache mich dann mal auf deine bessere Hälfte zu finden.. oder Dreiviertel oder so. #locus
++{not korper}[Ballons] ->Ballons
++{korper}[Gehen] Locus: Ich mache mich dann mal auf deine bessere Hälfte zu finden.. oder Dreiviertel oder so. #locus
 ->END
 
 =Bodylotion
@@ -62,10 +74,10 @@ Locus: Wieso verkaufst du Bodylotion? Wie kommt man dazu so etwas zu verkaufen, 
 Seth: Ach weisst du früher hatte ich einmal einen wirklich <color=\#58FF5E>strammen Körper</color>. Mit Armen und Beinen. #Seth
 Seth: Doch habe ich eines schlimmen Tages, einfach den Kopf verloren oder viel mehr meinen <color=\#58FF5E>Körper</color>. #Seth
 Seth: Ich würde alles dafür geben wieder mein <color=\#58FF5E>Skelett</color> zu haben. Und was erst meine Frau <color=\#66DBFF>Clara</color> dazu sagen würde... #Seth
-*[Helfen] ->Skelett
+*[Helfen] ->korper
 *[Weiter] ->Weiter
 
-=Skelett
+=korper
 Locus: Ich kann versuchen deinen <color=\#58FF5E>Körper</color> zu finden. #locus
 Seth: Ich danke dir. Solltest du meinen <color=\#58FF5E>Körper</color> wirklich finden, gebe ich dir einen höllischen Rabatt auf meine Preise! #Seth
 Locus: Ich wäre wohl mehr an deinen <color=\#58FF5E>Ballons</color> interessiert. #locus
@@ -93,15 +105,17 @@ Seth: Das ist mein Topseller. In der Businesswelt braucht man eben Köpfchen. ##
 Locus: Stehen deine <color=\#58FF5E>Ballons</color> auch zum Verkauf? #locus
 Seth: Nein, tut mir leid. Ich benötige diese um mit meinen Kunden auf Augenhöhe zu verhandeln. #Seth
 Seth: Das ist eine Priorität für einen jeden Geschäftsmann. #Seth
-->Skelett
+->korper
 
 
 
 =Hub
 Seth: {&Und? Hast du Neuigkeiten?|Gibt es etwas Neues?|Willkommen zurück! Hast du Informationen für mich?| Locus! Weisst du schon mehr?} #Seth
 *{Get_State("item_skelett")}[Skelett]->Skelend
-*{Get_State("item_skull = 8")}{Familie}[Skelett]->Kopfend
-+[Nein] Locus: Ich arbeite daran. Lass den Kopf nicht hängen. #locus
+*{Get_State("item_skull")>7}{Familie}[Skelett]->Kopfend
+*{Get_State("item_skull")>7}{Fam2}[Skelett]->Kopfend
+*{not Familie}[Familie]->Fam2
++[Nein] Locus: {Ich arbeite daran. Lass den Kopf nicht hängen.|Nein, ich wollte nur schauen ob du noch lebst.. ich meine ob es dir gut geht.} #locus
 ->END
 
 =Skelend
@@ -114,6 +128,7 @@ Seth: Und wenn erst der <color=\#66DBFF>Meister</color> das sieht, wir er mir si
 Locus: Was ist nun mit den <color=\#58FF5E>Ballons</color>? #locus
 Seth: Achja, die Ballons. Die brauche ich nun nicht mehr. Nie mehr! Bitte nimm sie. #Seth
 ~Add_State("item_ballons",1)
+~ Unity_Event("Q-Seth-4")
 Locus: Eine Freude mit dir Geschäfte zu machen. #locus
 ->END
 

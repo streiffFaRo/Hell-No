@@ -31,9 +31,9 @@ Remus: Alles was du gesammelt hast kannst du auf diesem <color=\#58FF5E>Tisch</c
 Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen kann, melde dich... #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
@@ -47,9 +47,9 @@ Remus: Abgesehen vom <color=\#58FF5E>Geschirr</color>, den <color=\#58FF5E>Getr�
 Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen kann, melde dich... #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
@@ -63,9 +63,9 @@ Locus: Woher soll ich das <color=\#58FF5E>Geschirr</color> nehmen? #locus
 Remus: Soweit ich weiss sollte <color=\#66DBFF>Kevin</color> in seiner <color=\#58FF5E>Werkstatt</color> etwas haben... #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
@@ -79,9 +79,9 @@ Locus: Wie komme ich zu <color=\#58FF5E>Getränken</color>? Und was möchte der 
 Remus: Woher soll ich das wissen? Sehe ich aus wie sein Mundschenk? Ich denke solange es flüssig ist wird es schon passen. #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
@@ -94,9 +94,9 @@ Locus: Hast du einen <color=\#58FF5E>Kuchen</color>? #locus
 Remus: Jetzt wirds lächerlich. #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
@@ -110,9 +110,9 @@ Locus: Wo würdest du nach <color=\#58FF5E>Ballons</color> suchen? #locus
 Remus: <color=\#66DBFF>Seth</color>, der Schädel benutzt einige um auf Augenhöhe mit allen reden zu können. Ich denke aber nicht, dass er diese so leicht hergibt. #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal
@@ -125,9 +125,9 @@ Remus: <color=\#66DBFF>Seth</color>, der Schädel benutzt einige um auf Augenhö
 Remus: {&Was kann ich gegen dich tun?|Was denn noch?|Bitte lass mich in Ruhe...|Was denn nun schon wieder?} #remus
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
-+[Getränke?] ->Getranke
-+[Kuchen?] ->Kuchen
-+[Ballons?] ->Ballons
++{not Get_State("item_flasche")}[Getränke?] ->Getranke
++{not Get_State("item_kuchen")}[Kuchen?] ->Kuchen
++{not Get_State("item_ballons")}[Ballons?] ->Ballons
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche Stahl] ->getStahl
 *{Kevin.Schal} {not Kevin.Loot}[Ich brauche Stahl] ->dochStahl
 *{Kevin.HelfenA}{not getSchal}{not getStahl}{not Kevin.Loot} [Ich brauche einen Schal] ->getSchal

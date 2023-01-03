@@ -14,8 +14,8 @@ Jaromir: Müüünnnzzzeeennn! #jaromir
 
 =Brucke
 Locus: Ich möchte über die Brücke. #locus
-Jaromir: Geeelllddd! #jaromir
 ~ Unity_Event("Q-Jaromir-1")
+Jaromir: Geeelllddd! #jaromir
 *[Du kannst mich mal] ->Agro
 *[Gehen] Locus: Sowas muss ich mir nicht antun. #locus
 ->END

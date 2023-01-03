@@ -17,7 +17,7 @@ Locus: Das könnte <color=\#58FF5E>Rasmus Säge</color> sein, ich sollte <color=
 ->END
 
 =PostKevin
-Locus: Das ist also <color=\#58FF5E>Rasmus Säge</color>. Ich sollte sie nun zu ihm zurück bringen um die <color=\#58FF5E>Flasche</color> zu bekommen.
+Locus: Das ist also <color=\#58FF5E>Rasmus Säge</color>. Ich sollte sie nun zu ihm zurück bringen um die <color=\#58FF5E>Flasche</color> zu bekommen. #thought
 *[Nehmen]->GetSaege
 +[Gehen]->END
 

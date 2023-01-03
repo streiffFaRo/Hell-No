@@ -159,7 +159,9 @@ Kevin: Brauchst du noch etwas? #kevin
 * {not Fest}{not WhyTeller}[Ich muss ein Fest organisieren]->Fest
 * {not Teller}{Fest}[Ich brauche Teller] ->Teller
 *{not Fest}{not WhyTeller}[Ich brauche Teller] ->WhyTeller
-*{Get_State("item_sage" < 1)}{Rasmus.Help}{Rasmus.5B}{Rasmus.Zahlen32}[Säge] ->Erlaubnis
+*{Rasmus.Help}[Säge] ->Erlaubnis
+*{Rasmus.5B}[Säge] ->Erlaubnis
+*{Rasmus.Zahlen32}[Säge] ->Erlaubnis
 +[Gehen] Locus: Nein, alles gut, bis bald. #locus
 ->END
 
