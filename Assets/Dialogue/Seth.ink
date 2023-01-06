@@ -112,8 +112,8 @@ Seth: Das ist eine Priorität für einen jeden Geschäftsmann. #Seth
 =Hub
 Seth: {&Und? Hast du Neuigkeiten?|Gibt es etwas Neues?|Willkommen zurück! Hast du Informationen für mich?| Locus! Weisst du schon mehr?} #Seth
 *{Get_State("item_skelett")}[Skelett]->Skelend
-*{Get_State("item_skull")>7}{Familie}[Skelett]->Kopfend
-*{Get_State("item_skull")>7}{Fam2}[Skelett]->Kopfend
+*{Get_State("item_skull")>7}{Familie}[Schädel]->Kopfend
+*{Get_State("item_skull")>7}{Fam2}[Schädel]->Kopfend
 *{not Familie}[Familie]->Fam2
 +[Nein] Locus: {Ich arbeite daran. Lass den Kopf nicht hängen.|Nein, ich wollte nur schauen ob du noch lebst.. ich meine ob es dir gut geht.} #locus
 ->END
@@ -137,7 +137,7 @@ Locus: Ich habe nun deine ganze Familie beisammen. #locus
 Seth: Oh du bist mir ein Quell der Freude. Es ist eine Zeit her seit dem letzten Familientreffen. #Seth
 ~ Unity_Event("Q-Skull-2")
 Locus: Bekomme ich nun Kopf-Geld? #locus
-Seth: Wie? Hast du das denn nicht aus Nächstenliebe gemacht? Oder um einem Freund und seiner Familie zu helfen?
+Seth: Wie? Hast du das denn nicht aus Nächstenliebe gemacht? Oder um einem Freund und seiner Familie zu helfen? #Seth
 *[Doch]->Nix
 *[Nein]->Lohn
 

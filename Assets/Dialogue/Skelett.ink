@@ -10,7 +10,7 @@ Skelett: {*Skelettgeräusche*|*Skelettgeräusche*|*Zwei Drummsticks mit sehr vie
 ->END
 
 =Gruss
-Locus: Guten Tag, ich müsste dich mitnehmen. #Locus
+Locus: Guten Tag, ich müsste dich mitnehmen. #locus
 Skelett: *Skelettgeräusche* #Skelett
 Locus: Kannst du denn keine anderen Sprachen? #locus
 Skelett: *Skelettgeräusche* #Skelett

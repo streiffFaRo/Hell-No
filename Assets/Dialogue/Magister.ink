@@ -37,7 +37,7 @@ Magister: Ach nein? Warum bist du denn gekommen?
 
 =WegenFeier
 Locus: Ich habe einen <color=\#58FF5E>Auftrag</color> vom <color=\#66DBFF>Meister</color> höchst selbst erhalten. Er wünscht eine <color=\#58FF5E>Feier</color> zu seinen Ehren. #locus
-Magister: Achja? Wie kommt der <color=\#66DBFF>Chef</color> denn dazu dir einen Auftrag zu geben? Hat er deine Qulifikation nicht gelesen? #Magister
+Magister: Achja? Wie kommt der <color=\#66DBFF>Chef</color> denn dazu dir einen Auftrag zu geben? Hat er deine Qualifikation nicht gelesen? #Magister
 Locus: Was er sich dabei gedacht hat kann ich dir nicht sagen, ich versuche aber seinen Wünschen nachzukommen. #locus
 Magister: Das kann ich verstehen. Was also kann ich tun um dich dabei zu unterstützen? #Magister
 *[Kuchen] ->Kuchen
@@ -89,7 +89,7 @@ Magister: {Da bist du ja wieder. Bist du nun Bereit?|Ganz erhlich so lange geht 
 =Frage1
 Locus: Gut, ich bin bereit für die <color=\#58FF5E>Fragen</color>. #locus
 Magister: Wunderbar. Hier kommt auch schon die erste Frage. #Magister
-Magister: In meinem Garten sind 10 Pilze. Wenn ich nun alle ausser 4 mitnehmen wie viele Pilze sind dann noch in meinem Garten? #Magister
+Magister: In meinem Garten sind 10 Pilze. Wenn ich nun alle ausser 4 mitnehme, wie viele Pilze sind dann noch in meinem Garten? #Magister
 *[0]Locus: 0 #locus
 ->F1F
 *[4]Locus: 4 #locus

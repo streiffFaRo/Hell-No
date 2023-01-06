@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameState : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameState : MonoBehaviour
 
     
     [SerializeField] private List<State> states;
+
+    [SerializeField] private UnityEvent skullsOn8;
     
     #endregion
 
@@ -18,6 +21,11 @@ public class GameState : MonoBehaviour
     public void Count()
     {
         skulltotal = skulltotal+ 1;
+        if (skulltotal == 8)
+        {
+            skullsOn8.Invoke();
+            Add("item_skull", 8, true);
+        }
     }
 
     public State Get(string id)
