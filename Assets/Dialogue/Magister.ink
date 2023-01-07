@@ -14,7 +14,7 @@ Locus: Nein diesmal habe ich leider keine Zeit für eine Pause. #locus
 Magister: Ach nein? Wieso also besuchst du mich? #Magister
 *[Feier] ->WegenFeier
 *[Pause] ->Pause
-*[Gehen] Locus: Ich wollte nur wissen wie es dir geht. #locus
+*[Gehen] Locus: Ich wollte nur wissen, wie es dir geht. #locus
 ->END
 
 =Back
@@ -25,33 +25,33 @@ Magister: Willkommen zurück. Jetzt vielleicht eine kleine Pause oder hast du ei
 ->END
 
 =Pause
-Locus: Ich denke eine Pause im Schatte köntte doch ganz verführerisch sein. Ich nehem einen Liegestuhl bitte! #locus
+Locus: Ich denke eine Pause im Schatte könnte doch ganz verführerisch sein. Ich nehme einen Liegestuhl bitte! #locus
 Magister: Hast du denn auch etwas als Gegenleistung? Du weisst, dass du mir noch zwei Aufenthalte von letzter Woche schuldest. #Magister
 Locus: Aber sicher doch, ich werde dich nächste Woche bezahlen. Dann bekommst du alles gleichzeitig. Das ist doch am besten für alle. #locus
-Magister: Nein, das kann ich nicht zulassen <color=\#66DBFF>Locus</color>. Wenn du nicht zahlen kannst bekommst du nichts mehr von mir. Es tut mir leid. #Magister
+Magister: Nein, das kann ich nicht zulassen <color=\#66DBFF>Locus</color>. Wenn du nicht zahlen kannst, bekommst du nichts mehr von mir. Es tut mir leid. #Magister
 Locus: Schade, aber ich bin sowieso nicht deswegen hier. #locus
 Magister: Ach nein? Warum bist du denn gekommen?
 *[Feier] ->WegenFeier
-*[Gehen] Locus: Das erzähle ich dir später, ich muss zuerst noch etwas sehr wichtiges erledigen. #locus
+*[Gehen] Locus: Das erzähle ich dir später, ich muss zuerst noch etwas sehr Wichtiges erledigen. #locus
 ->END
 
 =WegenFeier
 Locus: Ich habe einen <color=\#58FF5E>Auftrag</color> vom <color=\#66DBFF>Meister</color> höchst selbst erhalten. Er wünscht eine <color=\#58FF5E>Feier</color> zu seinen Ehren. #locus
 Magister: Achja? Wie kommt der <color=\#66DBFF>Chef</color> denn dazu dir einen Auftrag zu geben? Hat er deine Qualifikation nicht gelesen? #Magister
-Locus: Was er sich dabei gedacht hat kann ich dir nicht sagen, ich versuche aber seinen Wünschen nachzukommen. #locus
-Magister: Das kann ich verstehen. Was also kann ich tun um dich dabei zu unterstützen? #Magister
+Locus: Was er sich dabei gedacht hat, kann ich dir nicht sagen, ich versuche aber seinen Wünschen nachzukommen. #locus
+Magister: Das kann ich verstehen. Was also kann ich tun, um dich dabei zu unterstützen? #Magister
 *[Kuchen] ->Kuchen
 *[Liegestuhl] ->Stuhl
 
 =Kuchen
-Locus: Ich habe nun fast alles zusammen was ich für die <color=\#58FF5E>Feier</color> zusammen. Alles was mir noch fehlt ist ein <color=\#58FF5E>Kuchen</color>. #locus
+Locus: Ich habe nun fast alles zusammen was ich für die <color=\#58FF5E>Feier</color> zusammen. Alles, was mir noch fehlt ist ein <color=\#58FF5E>Kuchen</color>. #locus
 Magister: Ein <color=\#58FF5E>Kuchen</color>? Und du denkst ich bin ein begnadeter Bäcker oder was?
 *[Ja]->Backen
 *[Nein]->NoBacken
 
 =Stuhl
 Locus: Nun um meinen <color=\#58FF5E>Auftrag</color> best möglich zu erfüllen benötige ich selbstredend einen eigenen Liegestuhl für.. sagen wir eine Woche. #locus
-Magister: Du glaubst doch nicht wirklich, dass ich darauf reinfalle oder? Also was ist jetzt mir deinem Auftrag? #Magister
+Magister: Du glaubst doch nicht wirklich, dass ich darauf reinfalle, oder? Also was ist jetzt mir deinem Auftrag? #Magister
 ->Kuchen
 
 =Backen
@@ -62,7 +62,7 @@ Locus: Ok.. Also wirst du mir einen <color=\#58FF5E>Kuchen</color> backen? #locu
 
 
 =NoBacken
-Locus: Selbstverständlich nicht, das wäre ja total merkwürdig aber vielleicht kannst du mir andersweitig helfen. #locus
+Locus: Selbstverständlich nicht, das wäre ja total merkwürdig, aber vielleicht kannst du mir anderweitig helfen. #locus
 Magister: Ach.. Wie gemein von dir. Zufällig bin ich ein sehr talentierter Bäcker! Aber das ist also merkwürdig.. Sehr frech! #Magister
 Locus: So war das gar nicht gemeint. Ich wollte nicht nur nichts zumuten was dich verstimmen könnte. #locus
 Magister: Nein nein. Du hast deinen Punkt schon sehr klar gemacht. #Magister
@@ -74,14 +74,14 @@ Magister: Gut, ich werde dir einen <color=\#58FF5E>Kuchen</color> backen. Aber i
 ~ Unity_Event("Q-Magister-1")
 Locus: Um was geht es denn in dieser <color=\#58FF5E>Studie</color>? #locus
 Magister: Es handelt von deiner <color=\#58FF5E>Spezies</color>. Ich erforsche die Intelligent verschiedener Vertreter davon. <color=\#66DBFF>Rasmus</color> hat mir dabei bereits geholfen. #Magister
-Magister: Für dich wird es relativ leicht werden. Alles was du tun muss ist mir einige <color=\#58FF5E>Fragen</color> zu beantworten und bald hast du deinen <color=\#58FF5E>Kuchen</color>. #Magister
+Magister: Für dich wird es relativ leicht werden. Alles, was du tun muss ist mir einige <color=\#58FF5E>Fragen</color> zu beantworten und bald hast du deinen <color=\#58FF5E>Kuchen</color>. #Magister
 Magister: Bist du bereit? #Magister
 *[Ja] ->Frage1
 *[Gehen] Locus: Noch nicht, ich werde aber bald wieder kommen. #locus
 ->END
 
 =PreBeginn
-Magister: {Da bist du ja wieder. Bist du nun Bereit?|Ganz erhlich so lange geht das Spiel nicht mehr. Also willst du nun beginnen?|Können wir jetzt mit der Studie beginnen?} #Magister
+Magister: {Da bist du ja wieder. Bist du nun Bereit?|Ganz ehrlich so lange geht das Spiel nicht mehr. Also willst du nun beginnen?|Können wir jetzt mit der Studie beginnen?} #Magister
 *[Ja] ->Frage1
 *[Gehen] Locus: {Nein, ich brauch noch etwas mehr Zeit.|Ich lasse dich wissen wann ich Zeit habe.} #locus
 ->END
@@ -139,12 +139,12 @@ Magister: Danke für deine Antwort. Wir fahren fort. #Magister
 =Geschenkkarten
 ~Add_State("frage_falsch",1)
 Locus: Geschenkkarten! #locus
-Magister: Ich sehe schon was das hier wird. <color=\#66DBFF>Locus</color>, solltest du meine <color=\#58FF5E>Fragen</color> nicht ehrlich beantworten werde ich dir keinen <color=\#58FF5E>Kuchen</color> backen und du weisst was dann passiert. #Magister
+Magister: Ich sehe schon, was das hier wird. <color=\#66DBFF>Locus</color>, solltest du meine <color=\#58FF5E>Fragen</color> nicht ehrlich beantworten werde ich dir keinen <color=\#58FF5E>Kuchen</color> backen und du weisst was dann passiert. #Magister
 Locus: Nagut, ich werde mich anstrengen. Man darf aber auch gar keinen Spass mehr habe ohne, dass man angeschnauzt wird. #locus
 Magister: Du hast es darauf angelegt. Wie auch immer hier kommt die nächste Frage. #Magister
 ->Frage3
 =Frage3
-Magister: Wie viele male kann man 10 von 100 subtrahieren? #Magister
+Magister: Wie viele Male kann man 10 von 100 subtrahieren? #Magister
 *[Null]Locus: Gar nicht, null Mal.#locus
 ->F3F
 *[Einmal]Locus: Einmal! #locus
@@ -230,7 +230,7 @@ Magister: Herzlichen Glückwunsch, dein Ergebnis ist spektakulär schlecht! Der 
 =getKuchen
 Locus: Habe ich jetzt etwas gewonnen? #locus
 Magister: Ja, wie abgesprochen werde ich dir etwas für deinen <color=\#58FF5E>Auftrag</color> backen. #Magister
-Magister: Ich werde noch einige andere deiner <color=\#58FF5E>Spezies</color> befragen müssen um meine Studie zu beenden und ein klares Ergebis zu sehen. #Magister
+Magister: Ich werde noch einige andere deiner <color=\#58FF5E>Spezies</color> befragen müssen um meine Studie zu beenden und ein klares Ergebnis zu sehen. #Magister
 Magister: Ich kümmere mich dann mal um den <color=\#58FF5E>Kuchen</color>. Bitte gedulde dich einen Moment. #Magister
 ~ Unity_Event("Q-Magister-Fade")
 Magister: .

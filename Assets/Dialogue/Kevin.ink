@@ -18,7 +18,7 @@ Kevin: Nein, ich wollte sowieso eine kurze Pause einlegen. #kevin
 
 =Fest
 Locus: Ich muss ein Fest für den <color=\#66DBFF>Teufel</color> organisieren. #locus
-Kevin: Oh, dann wünsche ich dir viel Glück, du weisst ja was mit dem letzten geschah, der diese Aufgabe hatte... #kevin
+Kevin: Oh, dann wünsche ich dir viel Glück, du weisst ja was mit dem Letzten geschah, der diese Aufgabe hatte... #kevin
 *[Nein, was ist mit ihm?]->Victus
 *{not Arbeit}[An was arbeitest du da?]->Arbeit
 
@@ -28,7 +28,7 @@ Kevin: Der bedauerliche <color=\#66DBFF>Victus</color> hatte zuletzt diese Aufga
 <> <color=\#58FF5E>Ballons</color> und schon gar keinen <color=\#58FF5E>Kuchen</color> besorgt. #kevin
 Kevin: Wie du dir vorstellen kannst, war der <color=\#66DBFF>Meister</color> nicht sehr erfreut darüber. #kevin
 Kevin: <color=\#66DBFF>Victus</color> wurde daraufhin versetzt. Er muss sich nun um alle Franzosen der Hölle kümmern. #kevin
-Kevin: Trotzdessen wünsche ich dir nur das Beste. #kevin
+Kevin: Trotz dessen wünsche ich dir nur das Beste. #kevin
 {WhyTeller: ->Hub}
 {Hub: ->Hub}
 ->Arbeit
@@ -44,8 +44,8 @@ Kevin: Ich bin drauf und dran das <color=\#58FF5E>Zepter</color> meines Arbeitge
 
 =Stahl
 Locus: Was zum Chef ist denn <color=\#58FF5E>Höllenstahl</color>? #locus
-Kevin: Es schmerzt festzustellen, dass du solch mangelndes Verstädnis über grundlegende Praktiken meiner Arbeit hast. #kevin
-Kevin: Der <color=\#58FF5E>Höllenstahl</color> ist eines meiner wichtigesten und rarsten Materialien. Nur der <color=\#66DBFF>Meister</color> höchst selbst kann es fertigen. #kevin
+Kevin: Es schmerzt festzustellen, dass du solch mangelndes Verständnis über grundlegende Praktiken meiner Arbeit hast. #kevin
+Kevin: Der <color=\#58FF5E>Höllenstahl</color> ist eines meiner wichtigsten und rarsten Materialien. Nur der <color=\#66DBFF>Meister</color> höchst selbst kann es fertigen. #kevin
 +[Wie kann ich da helfen?] ->Helfen
 +[Gehen]->Gehen1
 
@@ -133,7 +133,7 @@ Kevin: Als <color=\#58FF5E>Belohnung</color> kannst du dir auch etwas wünschen.
 *[Nichts] Locus: Ich bin wunschlos glücklich. Ich brauche nichts.: ->Hub
 
 =Dreizack
-Locus: Ich möchste gerne das <color=\#58FF5E>Zepter</color>. #locus
+Locus: Ich möchte gerne das <color=\#58FF5E>Zepter</color>. #locus
 Kevin: Bist du denn von Sinnen? Den kann ich dir keinesfalls überlassen! Such dir etwas anderes aus. #kevin
 *[Teller]  ->Teller
 *[Nichts] Locus: Ich bin wunschlos glücklich. Ich brauche nichts.: ->Hub
@@ -145,9 +145,9 @@ Kevin: Gewiss doch, eine sehr weise Entscheidung. Ich hoffe es gelingt dir den <
 
 =WhyTeller
 Locus: Ich würde gerne deine <color=\#58FF5E>Teller</color> für ein Fest nutzen. #locus
-Kevin: Ein Fest? Was gibt es denn schönes zu feiern? #kevin
+Kevin: Ein Fest? Was gibt es denn Schönes zu feiern? #kevin
 Locus: Den Geburtstag unseres <color=\#66DBFF>Meisters</color>. Er hat mich angeblich persönlich für diese Aufgabe auserwählt. #locus
-Kevin: Oh, dann gebe ich dir die <color=\#58FF5E>Teller</color> gerne und wünsche dir viel Glück, du weisst ja was mit dem letzten geschah, der diese Aufgabe hatte... #kevin
+Kevin: Oh, dann gebe ich dir die <color=\#58FF5E>Teller</color> gerne und wünsche dir viel Glück, du weisst ja was mit dem Letzten geschah, der diese Aufgabe hatte... #kevin
 *[Nein, was ist mit ihm?]->Victus
 *[Gehen]Locus: Das ist doch keine grosse Sache, ich krieg das schon hin mit der Feier. #locus
 ->END
@@ -167,7 +167,7 @@ Kevin: Brauchst du noch etwas? #kevin
 
 =Erlaubnis
 Locus: Ich bin hier um <color=\#66DBFF>Rasmus</color> <color=\#58FF5E>Säge</color> zu holen. Er meinte, dass er sie für die kommende <color=\#58FF5E>Tränenernte</color> benötigt. #locus
-Kevin: Ja bitte, nimm sie ruhig mit. Ich konnte mein Vorhaben noch nicht beenden aber das werde ich selbst noch mit <color=\#66DBFF>Rasmus</color> abklären. Die <color=\#58FF5E>Säge</color> liegt auf dem <color=\#58FF5E>Sarg</color>. #kevin
+Kevin: Ja bitte, nimm sie ruhig mit. Ich konnte mein Vorhaben noch nicht beenden, aber das werde ich selbst noch mit <color=\#66DBFF>Rasmus</color> abklären. Die <color=\#58FF5E>Säge</color> liegt auf dem <color=\#58FF5E>Sarg</color>. #kevin
 Locus: Auf bald dann! #locus
 Kevin: Man sieht sich! #kevin
 ->END

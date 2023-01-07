@@ -39,7 +39,7 @@ Locus: Noch mehr Schokolade brauche ich nicht. Eine Tafel wird reichen müssen. 
 ->END
 
 =Falsch2
-Locus: Das habe ich bereits versucht, aber Jaromir hat mich durchschaut. Ich sollte etwas anderes versuchen. Kevin meinte, ich brauche etwas glänzendes... #thought
+Locus: Das habe ich bereits versucht, aber Jaromir hat mich durchschaut. Ich sollte etwas anderes versuchen. Kevin meinte, ich brauche etwas Glänzendes... #thought
 ->END
 
 =Stage4

@@ -5,7 +5,7 @@
 ->Tutorial
 
 =Tutorial
-Locus: Ein Ritualtisch. Gibts was zu feiern? #thought
+Locus: Ein Ritualtisch. Gibt es was zu feiern? #thought
 ->END
 
 

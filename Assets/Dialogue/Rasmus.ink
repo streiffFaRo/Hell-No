@@ -13,7 +13,7 @@
 =Gruss
 Rasmus: <color=\#66DBFF>Locus</color>... #Rasmus
 Locus: Hallo <color=\#66DBFF>Rasmus</color>, wie läuft die <color=\#58FF5E>Ernte</color>? #Rasmus
-Rasmus: Nun seit dem du mir nicht mehr in meine Arbeit funkst oder mich sabotiertst läuft es ausgesprochen gut. #Rasmus
+Rasmus: Nun seitdem du mir nicht mehr in meine Arbeit funkst oder mich sabotierst läuft es ausgesprochen gut. #Rasmus
 Locus: Ach was, ich glaube eher du hast Probleme, bist überarbeitet aber willst das vor mir nicht zugeben. #locus
 Rasmus: Überzeug dich selbst. Die <color=\#58FF5E>Tränenernte</color> dieses Monats fiel sehr gut aus. Sie ist wohl eine der besten seit langem. #Rasmus
 *[Meine Vorarbeit]->Vorarbeit
@@ -45,7 +45,8 @@ Rasmus: Sicherlich. Der <color=\#58FF5E>Jahrgang 2013</color> wird von ihm bevor
 Locus: Wäre es möglich, dass ich eine dieser <color=\#58FF5E>Flaschen</color> bekomme? #locus
 Rasmus: Meinst du das ernst? Ich soll dir eine der wertvollsten <color=\#58FF5E>Flaschen</color> meines Lagers geben? #Rasmus
 Locus: Es ist für unseren <color=\#66DBFF>Meister den Teufel</color>. Ist dir das nicht Grund genug? #locus
-Rasmus: Nein ist es nicht. Ich bin überzeugt, dass der <color=\#66DBFF>Teufel</color> dich dafür bestafen wird wenn er nicht bekommt was er will. #Rasmus
+Rasmus: Nein ist es nicht. Ich bin überzeugt, dass der <color=\#66DBFF>Teufel</color> dich dafür bestrafen wird, wenn er nicht bekommt was er will. #Rasmus
+*{Magister.ErgebnisGut}[Studie]->Studie
 *[Bitten] ->Bitte
 *[Bezahlen?]->Zahlen
 *[Helfen]->Help
@@ -53,6 +54,7 @@ Rasmus: Nein ist es nicht. Ich bin überzeugt, dass der <color=\#66DBFF>Teufel</
 
 =Hub
 Locus: Ich sollte etwas anderes versuchen. #thought
+*{Magister.ErgebnisGut}{not Studie}[Studie]->Studie
 *{not Bitte}[Bitten] ->Bitte
 *{not Zahlen}[Bezahlen?]->Zahlen
 +[Helfen]->Help
@@ -84,7 +86,7 @@ Rasmus: N E I N! #RasmusW
 
 =5B
 Locus: Bitte bitte bitte bitte bitte bitte bitte? #locus
-Rasmus: GENUG! Ich sage dir was wir jetzt machen. Ich gebe dir die <color=\#58FF5E>Flasche</color> wenn du mir von <color=\#58FF5E>Kevins Schmiede</color> meine <color=\#58FF5E>Säge</color> holst. Dann kann ich das wenigstens mit meinem Gewissen vereinbaren. #RasmusW
+Rasmus: GENUG! Ich sage dir, was wir jetzt machen. Ich gebe dir die <color=\#58FF5E>Flasche</color> wenn du mir von <color=\#58FF5E>Kevins Schmiede</color> meine <color=\#58FF5E>Säge</color> holst. Dann kann ich das wenigstens mit meinem Gewissen vereinbaren. #RasmusW
 ~ Unity_Event("Q-Rasmus-2")
 Locus: Danke danke danke danke danke danke danke danke! #locus
 Rasmus: GEH JETZT! #RasmusW
@@ -121,7 +123,7 @@ Rasmus: Wir sind in der Hölle. Die kalten Tage lassen sich hier nicht wirklich 
 *[Gürtel?]->Zahlen31
 
 =Zahlen31
-Locus: Als modisches Accessoir um deine Überlegenheit zu zeigen. #locus
+Locus: Als modisches Accessoire um deine Überlegenheit zu zeigen. #locus
 Rasmus: Nein, ich denke nicht, dass das zu mir passt oder funktioniert. Ich möchte den Schal nicht. Hast du sonst noch etwas anzubieten?#Rasmus
 *[Nichts]->Zahlen1
 *{not Zahlen2}[Freundschaft]->Zahlen2
@@ -152,7 +154,7 @@ Rasmus: Damit kriegst du mich nicht. Hast du sonst noch etwas anzubieten? #Rasmu
 =Zahlen5
 Locus: Es schmerzt mich das anzubieten, aber ich sehe du hast ausser deiner Streckbank keine Schlafmöglichkeit. ich könnte dir im Tausch mein <color=\#58FF5E>Bett</color> anbieten. #locus
 Rasmus: Ein <color=\#58FF5E>Bett</color>? Das wäre wirklich eine schöne Ergänzung für mein Abteil. Sowas in der Art hat mir auch schon mein Innenarchitekt geraten. #Rasmus
-Rasmus: Also gut, ich tasuche dein <color=\#58FF5E>Bett</color> gegen eine <color=\#58FF5E>Flasche</color>. Ich werde es sogleich holen lassen.#Rasmus
+Rasmus: Also gut, ich tausche dein <color=\#58FF5E>Bett</color> gegen eine <color=\#58FF5E>Flasche</color>. Ich werde es sogleich holen lassen.#Rasmus
 ~Add_State("item_flasche",1)
 Locus: Danke.. denke ich.. #locus
 ~ Unity_Event("Q-RasmusC-4")
@@ -161,26 +163,26 @@ Locus: Danke.. denke ich.. #locus
 
 =Help
 Locus: Kann ich dir vielleicht bei der <color=\#58FF5E>Tränenernte</color> helfen? #locus
-Rasmus: Nein bitte nur das nicht! ... Ich habe aber eine andere Idee wie du dir die <color=\#58FF5E>Flasche</color> verdienen kannst. Ich habe vor kurzem <color=\#66DBFF>Kevin</color> meine <color=\#58FF5E>Säge</color> geliehen weil er sich ein Bett machen wollte oder sowas. #Rasmus
+Rasmus: Nein bitte nur das nicht! ... Ich habe aber eine andere Idee wie du dir die <color=\#58FF5E>Flasche</color> verdienen kannst. Ich habe vor kurzem <color=\#66DBFF>Kevin</color> meine <color=\#58FF5E>Säge</color> geliehen, weil er sich ein Bett machen wollte oder sowas. #Rasmus
 Rasmus: Hol mir die <color=\#58FF5E>Säge</color> zurück und versprich mir, dass du mich nie wieder belästigst. Dann überlasse ich dir eine Flasche. #Rasmus
 Locus: Ich verspreche es. #locus
 ~ Unity_Event("Q-Rasmus-2")
-Rasmus: Gut, dann mol mir mein <color=\#58FF5E>Ernteinstrument</color>. #Rasmus
+Rasmus: Gut, dann hol mir mein <color=\#58FF5E>Ernteinstrument</color>. #Rasmus
 ->END
 
 =Droh
-Locus: Gib mir mir sofort die <color=\#58FF5E>Flasche</color> oder ich... #locus
+Locus: Gib mir sofort die <color=\#58FF5E>Flasche</color> oder ich... #locus
 *[Schlagen]->Schlagen
 *[Anzeigen]->Anzeigen
 
 =Schlagen
-Locus: Gib mir mir sofort die <color=\#58FF5E>Flasche</color> oder ich werde dich schlagen! #locus
+Locus: Gib mir sofort die <color=\#58FF5E>Flasche</color> oder ich werde dich schlagen! #locus
 Rasmus: Aber sicher doch. Ich kenne dich <color=\#66DBFF>Locus</color>, du würdest verlieren, versuch es also gar nicht erst! #Rasmus
 ->Hub
 
 =Anzeigen
-Locus: Gib mir mir sofort die <color=\#58FF5E>Flasche</color> oder ich zeig dich an! #locus
-Rasmus: Wieso willst du micht denn anzeigen? #Rasmus
+Locus: Gib mir sofort die <color=\#58FF5E>Flasche</color> oder ich zeig dich an! #locus
+Rasmus: Wieso willst du mich denn anzeigen? #Rasmus
 *[Lärmbelästigung]->Laut
 *[Ernteinstrumente]->Instrumente
 
@@ -190,7 +192,7 @@ Rasmus: Ich denke nicht, dass dir das etwas bringen wird. #Rasmus
 ->Hub
 
 =Instrumente
-Locus: Ich habe gesehen, dass die <color=\#58FF5E>Lizenz deiner Streckbank</color> ausgelaufgen ist. Ich werde das <color=\#66DBFF>Remus</color> melden müssen. #locus
+Locus: Ich habe gesehen, dass die <color=\#58FF5E>Lizenz deiner Streckbank</color> ausgelaufen ist. Ich werde das <color=\#66DBFF>Remus</color> melden müssen. #locus
 Rasmus: Was? Ich.. also..  Das wollte ich gerade heute austauschen. #Rasmus
 Locus: Erzähl das dem Richter! #locus
 Rasmus: Nagut. Ich überlasse dir eine <color=\#58FF5E>Flasche</color> aber sag bloss nichts weiter! #Rasmus
@@ -198,6 +200,14 @@ Rasmus: Nagut. Ich überlasse dir eine <color=\#58FF5E>Flasche</color> aber sag 
 Locus: Na geht doch. Keine Sorge die Sache ist schon vergessen. #locus
 ~ Unity_Event("Q-RasmusD-4")
 ->END
+
+=Studie
+Locus: Hast du schon von <color=\#58FF5E>Magisters Studie</color> gehört? #locus
+Rasmus: Sicher doch, es war mir ein leichtes für unsere Spezies ein gutes Anfangsergebnis zu erzielen. #Rasmus
+Locus: Ich habe soeben ein perfektes Ergebnis erzielt. #locus 
+Rasmus: Das kann nicht sein, der muss dir die leichte Variante gegeben haben. Ausserdem warum sagst du mir das? Denkst du, dass du mich so überzeugen kannst dir die <color=\#58FF5E>Flasche</color> zu geben? #Rasmus
+->Hub
+
 
 =Sage
 Rasmus: Hast du die <color=\#58FF5E>Säge</color> schon? #Rasmus
@@ -224,7 +234,7 @@ Rasmus: {Danke nochmals für das Bett. Ich hoffe du bereust das nicht. Falls du 
 ->END
 
 =PostAnzeige
-Rasmus: {Diese Erpressung war wiklich kein sehr ehrenvoller Zug von dir.|Stör mich nun nicht wieter!} #Rasmus
+Rasmus: {Diese Erpressung war wirklich kein sehr ehrenvoller Zug von dir.|Stör mich nun nicht wieter!} #Rasmus
 ->END
 
 
