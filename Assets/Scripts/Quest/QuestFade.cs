@@ -19,7 +19,7 @@ public class QuestFade : MonoBehaviour
     
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1.16f);
+        yield return new WaitForSeconds(2f);
         postFade.Invoke();
         FindObjectOfType<GameController>().EnterDialogMode();
     }

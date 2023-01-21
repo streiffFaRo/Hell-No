@@ -6,7 +6,7 @@
 -> PreQuest
 
 =PreQuest
-Skelett: {*Skelettgeräusche*|*Skelettgeräusche*|*Zwei Drummsticks mit sehr viel Reverb*|*Skelettgeräusche*} #Skelett
+Skelett: *Skelettgeräusche* #Skelett
 ->END
 
 =Gruss

@@ -49,7 +49,6 @@ public class Menu : MonoBehaviour
     {
         if (selectPreviousClose && selectOnClose != null)
         {
-            //selectOnClose.StartCoroutine(DelayedSelection(selectOnClose));
             Select(selectOnClose);
         }
         gameObject.SetActive(false);

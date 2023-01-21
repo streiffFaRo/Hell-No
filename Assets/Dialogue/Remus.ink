@@ -45,6 +45,7 @@ Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen k
 Locus: Also was genau möchte er für sein Fest? #locus
 Remus: Abgesehen vom <color=\#58FF5E>Geschirr</color>, den <color=\#58FF5E>Getränken</color> und einem <color=\#58FF5E>Kuchen</color> möchte der <color=\#66DBFF>Meister</color> nur ein paar <color=\#58FF5E>Ballons</color> zu seinem Fest... #remus
 Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen kann, melde dich... #remus
+*{not Ende}{Tisch.Event1}{Tisch.Event2}{Tisch.Event3}{Tisch.Event4}[Fertig!]->Ende
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +{not Get_State("item_flasche")}[Getränke?] ->Getranke
@@ -61,6 +62,7 @@ Remus: Sobald du bereit bist und ich den <color=\#66DBFF>Meister</color> rufen k
 =Geschirr
 Locus: Woher soll ich das <color=\#58FF5E>Geschirr</color> nehmen? #locus
 Remus: Soweit ich weiss, sollte <color=\#66DBFF>Kevin</color> in seiner <color=\#58FF5E>Werkstatt</color> etwas haben... #remus
+*{not Ende}{Tisch.Event1}{Tisch.Event2}{Tisch.Event3}{Tisch.Event4}[Fertig!]->Ende
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +{not Get_State("item_flasche")}[Getränke?] ->Getranke
@@ -77,6 +79,7 @@ Remus: Soweit ich weiss, sollte <color=\#66DBFF>Kevin</color> in seiner <color=\
 =Getranke
 Locus: Wie komme ich zu <color=\#58FF5E>Getränken</color>? Und was möchte der <color=\#66DBFF>Chef</color> denn überhaupt trinken? #locus
 Remus: Woher soll ich das wissen? Sehe ich aus wie sein Mundschenk? Ich denke, solange es flüssig ist wird es schon passen. #remus
+*{not Ende}{Tisch.Event1}{Tisch.Event2}{Tisch.Event3}{Tisch.Event4}[Fertig!]->Ende
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +{not Get_State("item_flasche")}[Getränke?] ->Getranke
@@ -92,6 +95,7 @@ Remus: Woher soll ich das wissen? Sehe ich aus wie sein Mundschenk? Ich denke, s
 =Kuchen
 Locus: Hast du einen <color=\#58FF5E>Kuchen</color>? #locus
 Remus: Jetzt wirds lächerlich. #remus
+*{not Ende}{Tisch.Event1}{Tisch.Event2}{Tisch.Event3}{Tisch.Event4}[Fertig!]->Ende
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +{not Get_State("item_flasche")}[Getränke?] ->Getranke
@@ -108,6 +112,7 @@ Remus: Jetzt wirds lächerlich. #remus
 =Ballons
 Locus: Wo würdest du nach <color=\#58FF5E>Ballons</color> suchen? #locus
 Remus: <color=\#66DBFF>Seth</color>, der Schädel benutzt einige, um auf Augenhöhe mit allen reden zu können. Ich denke aber nicht, dass er diese so leicht hergibt. #remus
+*{not Ende}{Tisch.Event1}{Tisch.Event2}{Tisch.Event3}{Tisch.Event4}[Fertig!]->Ende
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +{not Get_State("item_flasche")}[Getränke?] ->Getranke
@@ -123,6 +128,7 @@ Remus: <color=\#66DBFF>Seth</color>, der Schädel benutzt einige, um auf Augenh�
 
 =Back
 Remus: {&Was kann ich gegen dich tun?|Was denn noch?|Bitte lass mich in Ruhe...|Was denn nun schon wieder?} #remus
+*{not Ende}{Tisch.Event1}{Tisch.Event2}{Tisch.Event3}{Tisch.Event4}[Fertig!]->Ende
 +[Was muss ich tun?] ->WasTun
 +{not Get_State("item_teller")}[Geschirr?] ->Geschirr
 +{not Get_State("item_flasche")}[Getränke?] ->Getranke
@@ -170,6 +176,35 @@ Remus: Ich denke, dass dein Gehör sein könnte. Aber nun ergibt das auch einen 
 Locus: Ich habe gesehen, dass Rasmus eine ausgelaufene Lizenz für seine Streckbank hat. Vielleicht solltest du ihn darauf ansprechen. #locus
 Remus: Was?! Er hat sie immer noch nicht erneuert?! Ich habe ihn bereits zwei Mal darauf angesprochen! Das wird Folgen nach sich ziehen. Ich danke dir für deine Meldung. #remus
 ->END
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+=Ende
+Locus: Ich habe es geschafft. Alles ist für die <color=\#58FF5E>Feier</color> vorbereitet! #locus
+Remus: Wahrlich. Ich hätte nicht gedacht, dass du das schaffen würdest. Ich bin beeindruckt. Ich werde also nun den <color=\#66DBFF>Meister</color> rufen. #remus 
+~ Unity_Event("Teufel")
+Remus: .
+Remus: ..
+Remus: ...
+Teufel: Wer wagt es mich zu beschwören! #Teufel
+Teufel: Aber was sehe ich denn da? <color=\#58FF5E>Winzige Teller</color>, <color=\#58FF5E>kleine Ballons</color>, <color=\#58FF5E>ein Fläschchen</color> und soll das ein <color=\#58FF5E>Kuchen</color> sein? #Teufel
+Teufel: <color=\#66DBFF>Locus</color> du Narr! #Teufel
+Teufel: Ich will ein Fest eines <color=\#66DBFF>Teufels</color> würdig! Du wirst alles neu beschaffen und du wirst gleich morgen damit anfangen! #Teufel
+~ Unity_Event("Facecam")
+Locus: .
+Locus: ..
+Locus: ...
+Locus: <color=\#58FF5E>Hell No!</color> #locus 
+~ Unity_Event("Endscreen")
+->END
+
+
+
+
+
+
+
+
 
 
 

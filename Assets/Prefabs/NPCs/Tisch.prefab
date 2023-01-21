@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1218186821555582487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1174558959482603797}
+    m_Modifications:
+    - target: {fileID: 756957416943745386, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Tisch-END.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.769
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576033286261206434, guid: 5136582137df2e24f9bcb28836e5ca1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5136582137df2e24f9bcb28836e5ca1f, type: 3}
 --- !u!1001 &5482637599814551177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,72 +172,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5482637599814551177}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5912976442488974763
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1174558959482603797}
-    m_Modifications:
-    - target: {fileID: 1342608559801411975, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_Name
-      value: Tisch-END
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3031739632326440412, guid: 812efd7dcf9c6aa469f376cc9dfb6d96,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 812efd7dcf9c6aa469f376cc9dfb6d96, type: 3}

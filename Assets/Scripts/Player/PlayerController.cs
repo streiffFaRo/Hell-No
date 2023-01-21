@@ -47,20 +47,6 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Sensitivität der vertikalen Kamerabewegung")]
     [SerializeField] private float cameraVerticalSpeed = 130f;
 
-    [Header("Mouse Settings")]
-    [Range(0f, 2f)]
-    [Tooltip("Multiplikator für Mausgeschwindigkeit")]
-    [SerializeField] private float mouseCameraSensitivity = 1f;
-
-    
-    [Header("Controller Settings")]
-    [Range(0f, 2f)]
-    [Tooltip("Multiplikator für Mausgeschwindigkeit")]
-    [SerializeField] private float controllerCameraSensitivity = 1f;
-
-    [Tooltip("Kehrt die Y-Achse für Controller")]
-    [SerializeField] private bool invertY = true;
-
     [Header("Animations")]
     [SerializeField] private Animator animator;
     [Min(0)]
@@ -96,6 +82,9 @@ public class PlayerController : MonoBehaviour
         lookAction = input.Player.Look;
         
         input.Player.Interact.performed += Interact;
+
+        characterTargetRotation = transform.rotation;
+        cameraRotation = cameraTarget.rotation.eulerAngles;
     }
 
     private void OnEnable()
@@ -161,11 +150,13 @@ public class PlayerController : MonoBehaviour
 
             float deltaTimeMultiplier = isMouseLook ? 1f : Time.deltaTime;
 
-            float sensitivity = isMouseLook ? mouseCameraSensitivity : controllerCameraSensitivity;
+            float sensitivity = isMouseLook ? PlayerPrefs.GetFloat(SettingsMenu.MouseSens, SettingsMenu.DefaultMouseSens) 
+                                            : PlayerPrefs.GetFloat(SettingsMenu.ControllerSens, SettingsMenu.DefaultControllerSens) ;
             
             lookInput *= deltaTimeMultiplier * sensitivity;
-            
-            cameraRotation.x += lookInput.y * cameraVerticalSpeed * (!isMouseLook && invertY ? -1 : 1);
+
+            bool invertY = !isMouseLook && SettingsMenu.GetBool(SettingsMenu.InvertYKey, SettingsMenu.DefaultInvertY);
+                           cameraRotation.x += lookInput.y * cameraVerticalSpeed * (invertY ? -1 : 1);
             cameraRotation.y += lookInput.x * cameraHorizontalSpeed;
 
             cameraRotation.x = NormalizeAngle(cameraRotation.x);

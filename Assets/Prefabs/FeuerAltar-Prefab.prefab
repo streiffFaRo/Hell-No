@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1323755448
       Data3: 296352165
       Data4: -377073611
-    Path: event:/Fire
+    Path: event:/SFX/Fire
   Event: 
   PlayEvent: 1
   StopEvent: 12

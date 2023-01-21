@@ -356,7 +356,7 @@ MonoBehaviour:
       Data2: 1201516111
       Data3: -1675123311
       Data4: 2128831074
-    Path: event:/UI/Clicksound
+    Path: event:/SFX/UI/Clicksound
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
       Data2: 1215194852
       Data3: 945294525
       Data4: 1046764181
-    Path: event:/UI/Hover
+    Path: event:/SFX/UI/Hover
   Event: 
   PlayEvent: 0
   StopEvent: 0

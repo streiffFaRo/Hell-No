@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Blockout.unity
-    guid: ae34187a769b11145ad5c17602ecd885
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: a8f4d83927db3ab4fba34689a3fd5021
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: ae34187a769b11145ad5c17602ecd885
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 424dab6e7cb6a2142ab8d5e8511fdb2b
   - enabled: 0
     path: Assets/Scenes/Sandbox.unity
     guid: 99c9720ab356a0642a771bea13969a05

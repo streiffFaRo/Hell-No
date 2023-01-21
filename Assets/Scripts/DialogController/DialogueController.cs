@@ -35,6 +35,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private StudioEventEmitter magister;
     [SerializeField] private StudioEventEmitter rasmus;
     [SerializeField] private StudioEventEmitter rasmusW;
+    [SerializeField] private StudioEventEmitter teufel;
 
 
     public static event Action DialogueOpend;
@@ -258,6 +259,10 @@ public class DialogueController : MonoBehaviour
         if (tags.Contains("RasmusW"))
         {
             rasmusW.Play();
+        }
+        if (tags.Contains("Teufel"))
+        {
+            teufel.Play();
         }
 
         return line;

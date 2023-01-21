@@ -1,6 +1,7 @@
 ===Tisch===
 
 =Start
+{Event1 && Event2 && Event3 && Event4: ->TFinal}
 {Remus.Gruss: ->Hub}
 ->Tutorial
 
@@ -29,4 +30,10 @@ Locus: Hier kann ich Gegenstände fürs Fest deponieren. #thought
 =Event4
 ~ Unity_Event("Event4")
 ->Hub
+
+=TFinal
+Locus: Ich habe nun alles zusammen und sollte mit Remus reden. #thought
+->END
+
+
 

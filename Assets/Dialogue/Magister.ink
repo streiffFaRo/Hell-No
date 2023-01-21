@@ -45,7 +45,7 @@ Magister: Das kann ich verstehen. Was also kann ich tun, um dich dabei zu unters
 
 =Kuchen
 Locus: Ich habe nun fast alles zusammen was ich für die <color=\#58FF5E>Feier</color> zusammen. Alles, was mir noch fehlt ist ein <color=\#58FF5E>Kuchen</color>. #locus
-Magister: Ein <color=\#58FF5E>Kuchen</color>? Und du denkst ich bin ein begnadeter Bäcker oder was?
+Magister: Ein <color=\#58FF5E>Kuchen</color>? Und du denkst ich bin ein begnadeter Bäcker oder was? #Magister
 *[Ja]->Backen
 *[Nein]->NoBacken
 
@@ -73,7 +73,7 @@ Locus: Komm schon, gib mir noch einen Versuch. Ich brauche diesen <color=\#58FF5
 Magister: Gut, ich werde dir einen <color=\#58FF5E>Kuchen</color> backen. Aber ich brauche dich für eine <color=\#58FF5E>Studie</color> an der ich arbeite. #Magister
 ~ Unity_Event("Q-Magister-1")
 Locus: Um was geht es denn in dieser <color=\#58FF5E>Studie</color>? #locus
-Magister: Es handelt von deiner <color=\#58FF5E>Spezies</color>. Ich erforsche die Intelligent verschiedener Vertreter davon. <color=\#66DBFF>Rasmus</color> hat mir dabei bereits geholfen. #Magister
+Magister: Es handelt von deiner <color=\#58FF5E>Spezies</color>. Ich erforsche die Intelligenz verschiedener Vertreter davon. <color=\#66DBFF>Rasmus</color> hat mir dabei bereits geholfen. #Magister
 Magister: Für dich wird es relativ leicht werden. Alles, was du tun muss ist mir einige <color=\#58FF5E>Fragen</color> zu beantworten und bald hast du deinen <color=\#58FF5E>Kuchen</color>. #Magister
 Magister: Bist du bereit? #Magister
 *[Ja] ->Frage1
@@ -112,6 +112,7 @@ Magister: Gut, kommen wir zur nächsten Frage. #Magister
 
 =Apfelsaft
 Locus: Apfelsaft! #locus
+~Add_State("frage_falsch",1)
 Magister: Apfelsaft? #Magister
 Locus: Apfelsaft! #locus
 Magister: Bitte nimm meine <color=\#58FF5E>Fragen</color> ernst. Also machen wir weiter. #Magister

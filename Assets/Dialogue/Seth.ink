@@ -14,9 +14,9 @@ Seth: Bitte bitte, nicht so zurückhaltend. Ich habe meine <color=\#66DBFF>neunk
 *[Ballons] ->Ballons
 
 =Familie
-Locus: Sagtest du <color=\#66DBFF>achtköpfige Familie</color>? #locus
+Locus: Sagtest du <color=\#66DBFF>neunköpfige Familie</color>? #locus
 Seth: Ganz recht. Ich und meine Frau <color=\#66DBFF>Clara Kopf</color> haben 7 wunderbare Kinder. #Seth
-Seth: Besonders stolz bin ich auf meine <color=\#66DBFF>Charlocke</color>. Sie hat seit kurzen die Fühung eines <color=\#58FF5E>Limonadenstandes</color> übernommen. #Seth
+Seth: Besonders stolz bin ich auf meine <color=\#66DBFF>Charlocke</color>. Sie hat seit kurzen die Führung eines <color=\#58FF5E>Limonadenstandes</color> übernommen. #Seth
 Seth: Ich hoffe, wenn ihr Schädel voll ausgewachsen ist, wird sie eines Tages meinen Laden übernehmen können. Das wäre mein Hirneswunsch. #Seth
 Seth: Wo wir gerade davon sprechen. Es wäre mir eine grosse Freude, wenn du bei Gelegenheit meine ganze <color=\#58FF5E>Familie einsammeln</color> könntest und sie her bringst. #Seth
 Locus: Sagtest du "einsammeln"? #locus
@@ -28,9 +28,9 @@ Seth: Ach du weisst, was ich meine! #Seth
 +[Ballons] ->Ballons
 
 =Fam2
-Locus: Du hast doch einmal eine <color=\#66DBFF>achtköpfige Familie</color> erwähnt, oder? #locus
+Locus: Du hast doch einmal eine <color=\#66DBFF>neunköpfige Familie</color> erwähnt, oder? #locus
 Seth: Ganz recht. Ich und meine Frau <color=\#66DBFF>Clara Kopf</color> haben 7 wunderbare Kinder. #Seth
-Seth: Besonders stolz bin ich auf meine <color=\#66DBFF>Charlocke</color>. Sie hat seit kurzen die Fühung eines <color=\#58FF5E>Limonadenstandes</color> übernommen. #Seth
+Seth: Besonders stolz bin ich auf meine <color=\#66DBFF>Charlocke</color>. Sie hat seit kurzen die Führung eines <color=\#58FF5E>Limonadenstandes</color> übernommen. #Seth
 Seth: Ich hoffe, wenn ihr Schädel voll ausgewachsen ist, wird sie eines Tages meinen Laden übernehmen können. Das wäre mein Hirneswunsch. #Seth
 Seth: Wo wir gerade davon sprechen. Es wäre mir eine grosse Freude, wenn du bei Gelegenheit meine ganze <color=\#58FF5E>Familie einsammeln</color> könntest und sie her bringst. #Seth
 Locus: Sagtest du "einsammeln"? #locus
@@ -95,7 +95,7 @@ Locus: Ach vergiss es! #locus
 
 =Glaskugeln
 Locus: Wer kauft denn Glaskugeln? #locus
-Seth: Die verkaufe ich hautsächlich an die alten Schreckschrauben vom Bridgeclub. Die meinen alle damit können sie die Karten ihrer Kontrahenten einsehen. #Seth
+Seth: Die verkaufe ich hautpsächlich an die alten Schreckschrauben vom Bridgeclub. Die meinen alle damit können sie die Karten ihrer Kontrahenten einsehen. #Seth
 Seth: Kleines Geheimnis am Rande, alle meine <color=\#58FF5E>Glaskugeln sind batteriebetrieben</color>. #Seth
 Seth: Da diese Hexen das nicht wissen kommen sie alle paar Wochen wieder. Sie denken der Geist der Kugel hätte sie wegen ihrer schändlichen Taten verlassen. #Seth
 Seth: Das ist mein Topseller. In der Businesswelt braucht man eben Köpfchen. ##Seth
@@ -159,6 +159,7 @@ Seth: Aber ich will mal nicht so sein. Gut ich werde dir eine <color=\#58FF5E>Gl
 Locus: Ich will aber auch ausreichend <color=\#58FF5E>Batterien</color> dazu und mir nicht direkt eine neue kaufen müssen. #locus
 Seth: Aber sicher doch, selbstreden für eine solche Tat bekommst du auch genug Batterien. #Seth
 ~ Unity_Event("Kugel")
+~Add_State("item_kugel",1)
 Locus: Wunderbar, ein guter Deal!
 ->END
 
@@ -172,6 +173,7 @@ Locus: Na geht doch. Ein guter Deal. #locus
 Seth: Aber sicher doch und solltest du die Kugel verärgern, bist du eingeladen dir eine neue zu kaufen. #Seth
 Locus: Wieso sollte sie verärgert sein? #locus
 ~ Unity_Event("Kugel")
+~Add_State("item_kugel",1)
 Seth: Das ist ein Betriebsgeheimnis. Ich danke aber für deine Hilfe. #Seth
 ->END
 
