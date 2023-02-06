@@ -47,6 +47,18 @@ PrefabInstance:
       propertyPath: m_text
       value: <Choice>
       objectReference: {fileID: 0}
+    - target: {fileID: 2721642537040671741, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3577472a10942b94c93d1f2d5fffbdcc,
+        type: 2}
+    - target: {fileID: 2721642537040671741, guid: 1a1b67e013a36d74486c8c8071b586ec,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3574218673465146415, guid: 3577472a10942b94c93d1f2d5fffbdcc,
+        type: 2}
     - target: {fileID: 2803558637082861381, guid: 1a1b67e013a36d74486c8c8071b586ec,
         type: 3}
       propertyPath: m_AnchorMax.y

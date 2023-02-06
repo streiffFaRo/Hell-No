@@ -21,8 +21,8 @@ Seth: Ich hoffe, wenn ihr Schädel voll ausgewachsen ist, wird sie eines Tages m
 Seth: Wo wir gerade davon sprechen. Es wäre mir eine grosse Freude, wenn du bei Gelegenheit meine ganze <color=\#58FF5E>Familie einsammeln</color> könntest und sie her bringst. #Seth
 Locus: Sagtest du "einsammeln"? #locus
 ~ Unity_Event("Q-Skull-1")
-Seth: Ganz recht. Du läufst einfach über sie drüber und dann sollten sie sich in deinem Inventar wiederfinden. #Seth
-Locus: Meinem Inventar? #locus
+Seth: Ganz recht. Du läufst einfach über sie drüber und dann sollten sie sich in der linken Bildschirmecke wiederfinden. #Seth
+Locus: Linken Bildschirmecke? #locus
 Seth: Ach du weisst, was ich meine! #Seth
 *[Kaufen?]->Kaufen
 +[Ballons] ->Ballons

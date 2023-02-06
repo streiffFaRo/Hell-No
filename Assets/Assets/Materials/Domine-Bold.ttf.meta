@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 24e2caa6ff104a649975bf480005d1ba
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Domine
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 309b6d8508f203342842f0912c90deb5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
